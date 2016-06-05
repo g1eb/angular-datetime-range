@@ -1,0 +1,36 @@
+{
+  "name": "angular-datetime-range",
+  "authors": [
+    "Gleb <git@gleb.nl>"
+  ],
+  "description": "UI widget for datetime range input, converted to an angular directive for your convenience.",
+  "main": "datetime-range.js",
+  "moduleType": [],
+  "keywords": [
+    "angular",
+    "angularjs",
+    "directive",
+    "date",
+    "time",
+    "datetime",
+    "range",
+    "daterange",
+    "datepair",
+    "input",
+    "dateinput",
+    "timeinput"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/g1eb/angular-datetime-range",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.6",
+    "moment": "^2.13.0"
+  }
+}
