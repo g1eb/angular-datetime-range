@@ -11,7 +11,7 @@ angular.module('g1b.datetime-range', []).
       handler: '='
     },
     replace: true,
-    template: '<div class="datetime-range"></div>',
+    templateUrl: 'datetime-range.html',
     link: function (scope, element) {
 
     }
