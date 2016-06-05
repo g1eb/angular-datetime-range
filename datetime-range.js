@@ -1,5 +1,7 @@
 'use strict';
 
+/* globals moment */
+
 angular.module('g1b.datetime-range', []).
   directive('datetimeRange', function () {
 
