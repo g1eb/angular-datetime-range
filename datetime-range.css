@@ -12,9 +12,6 @@
 .datetime-range .start-datetime,
 .datetime-range .end-datetime {
   float: left;
-}
-
-.datetime-range .datetime {
   cursor: pointer;
   background: #efefef;
   padding: 0.5em 2em;
@@ -29,8 +26,10 @@
   line-height: 1.5em;
 }
 
-.datetime-range .datetime.active,
-.datetime-range .datetime:hover {
+.datetime-range .start-datetime.active,
+.datetime-range .start-datetime:hover,
+.datetime-range .end-datetime.active,
+.datetime-range .end-datetime:hover {
   background: #ddd;
 }
 
@@ -38,7 +37,7 @@
   margin-right: 1.5em;
 }
 
-.datetime-range .start-datetime .datetime:after {
+.datetime-range .start-datetime::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -47,14 +46,15 @@
   border-bottom: 2.2em solid transparent;
   border-left: 1em solid #efefef;
   right: -1em;
+  z-index: 5;
 }
 
-.datetime-range .start-datetime .datetime.active:after,
-.datetime-range .start-datetime .datetime:hover:after {
+.datetime-range .start-datetime.active::after,
+.datetime-range .start-datetime:hover::after {
   border-left-color: #ddd;
 }
 
-.datetime-range .end-datetime .datetime:before {
+.datetime-range .end-datetime::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -65,8 +65,8 @@
   left: -1em;
 }
 
-.datetime-range .end-datetime .datetime.active:before,
-.datetime-range .end-datetime .datetime:hover:before {
+.datetime-range .end-datetime.active::before,
+.datetime-range .end-datetime:hover::before {
   border-color: #ddd #ddd #ddd transparent;
 }
 
