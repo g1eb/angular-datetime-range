@@ -11,15 +11,15 @@
 
 .datetime-range .start-datetime,
 .datetime-range .end-datetime {
-  float: left;
   cursor: pointer;
-  background: #efefef;
-  padding: 0.5em 2em;
-  float: left;
-  text-decoration: none;
-  color: #444;
-  text-shadow: 0 1px 0 rgba(255,255,255,.5);
   position: relative;
+  float: left;
+  padding: 0.5em 2em;
+  color: #444;
+  background-color: #efefef;
+  transition: background-color 0.25s ease;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  text-decoration: none;
   text-align: center;
   font-family: sans-serif;
   font-size: 1em;
@@ -45,6 +45,7 @@
   border-top: 2.2em solid transparent;
   border-bottom: 2.2em solid transparent;
   border-left: 1em solid #efefef;
+  transition: border-left 0.25s ease;
   right: -1em;
   z-index: 5;
 }
@@ -62,6 +63,7 @@
   border-width: 2.2em 0 2.2em 1em;
   border-style: solid;
   border-color: #efefef #efefef #efefef transparent;
+  transition: border-color 0.25s ease;
   left: -1em;
 }
 
