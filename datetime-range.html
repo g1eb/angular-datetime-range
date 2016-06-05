@@ -11,6 +11,6 @@
     <div>{{ end.format('DD MMMM YYYY') }}</div>
     <div>{{ end.format('HH:mm:ss') }}</div>
   </div>
-  <div class="edit-popover">
+  <div class="edit-popover {{ selected }}" ng-show="!!selected">
   </div>
 </div>
