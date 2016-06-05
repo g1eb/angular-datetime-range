@@ -79,24 +79,30 @@
   background: #efefef;
   border-radius: 0px;
   z-index: 15;
-  -webkit-box-shadow: 0px 1px 5px 1px #ddd;
-  box-shadow: 0px 1px 5px 1px #ddd;
+  border: 1px solid #ccc;
 }
 
 .datetime-range .edit-popover::after {
-    content: '';
-    display: block;
-    position: relative;
-    background-color: #efefef;
-    width: 1em;
-    height: 1em;
-    top: -0.5em;
-    left: 10%;
-    -box-shadow: 1px -1px 3px -1px #ddd;
-    box-shadow: 1px -1px 3px -1px #ddd;
-    transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
+  content: '';
+  display: block;
+  position: relative;
+  background-color: #efefef;
+  width: 1em;
+  height: 1em;
+  top: -0.575em;
+  border-width: 1px 1px 0 0;
+  border-style: solid;
+  border-color: #ccc;
+  transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.datetime-range .edit-popover.start::after {
+  left: 5%;
+}
+.datetime-range .edit-popover.end::after {
+  left: 90%;
 }
