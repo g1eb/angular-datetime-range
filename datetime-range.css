@@ -84,7 +84,7 @@
   border: 1px solid #ccc;
 }
 
-.datetime-range .edit-popover::after {
+.datetime-range .edit-popover::before {
   content: '';
   display: block;
   position: relative;
@@ -102,9 +102,9 @@
   -webkit-transform: rotate(-45deg);
 }
 
-.datetime-range .edit-popover.start::after {
+.datetime-range .edit-popover.start::before {
   left: 5%;
 }
-.datetime-range .edit-popover.end::after {
+.datetime-range .edit-popover.end::before {
   left: 90%;
 }
