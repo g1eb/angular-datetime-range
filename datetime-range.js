@@ -14,8 +14,13 @@ angular.module('g1b.datetime-range', []).
     },
     replace: true,
     templateUrl: 'datetime-range.html',
-    link: function (scope, element) {
-
+    compile: function () {
+      return {
+        pre: function preLink() {},
+        post: function postLink() {}
+      };
+    },
+    controller: function ($scope) {
     }
   };
 });
