@@ -1,4 +1,4 @@
-# Angular directive for datetime range input ui element
+# Datetime range input UI element
 
 This datetime range input is used to fascilitate easy input of datetime objects representing a range with a start datetime and end datetime.
  
@@ -35,8 +35,8 @@ angular.module('myApp', [
 
 |Property        | Usage           | Default  | Required |
 |:------------- |:-------------|:-----:|:-----:|
-| start_datetime | Start datetime object | UTC now | yes |
-| end_datetime | End datetime object | UTC now + 1 hour | yes |
+| start_datetime | Start datetime object | none | yes |
+| end_datetime | End datetime object | none | yes |
 | handler | Handler function is fired on blur of the editing panel, start_datetime and end_datetime are passed as arguments, can be used to save changed datetime objects or do something else with it | none | no |
 
 ### Example data
