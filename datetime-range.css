@@ -1,3 +1,6 @@
+/**
+ * Datetime range styles
+ */
 .datetime-range {
   user-select: none;
   -ms-user-select: none;
@@ -9,6 +12,10 @@
   width: 100%;
 }
 
+
+/**
+ * Start and end datetime objects
+ */
 .datetime-range .start-datetime,
 .datetime-range .end-datetime {
   cursor: pointer;
@@ -25,18 +32,15 @@
   font-size: 1em;
   line-height: 1.5em;
 }
-
 .datetime-range .start-datetime.active,
 .datetime-range .start-datetime:hover,
 .datetime-range .end-datetime.active,
 .datetime-range .end-datetime:hover {
   background: #ddd;
 }
-
 .datetime-range .start-datetime {
   margin-right: 1.5em;
 }
-
 .datetime-range .start-datetime::after {
   content: "";
   position: absolute;
@@ -49,12 +53,10 @@
   right: -1em;
   z-index: 5;
 }
-
 .datetime-range .start-datetime.active::after,
 .datetime-range .start-datetime:hover::after {
   border-left-color: #ddd;
 }
-
 .datetime-range .end-datetime::before {
   content: "";
   position: absolute;
@@ -66,12 +68,15 @@
   transition: border-color 0.25s ease;
   left: -1em;
 }
-
 .datetime-range .end-datetime.active::before,
 .datetime-range .end-datetime:hover::before {
   border-color: #ddd #ddd #ddd transparent;
 }
 
+
+/**
+ * Edit datetime popover
+ */
 .datetime-range .edit-popover {
   position: absolute;
   top: 80px;
@@ -83,7 +88,6 @@
   z-index: 15;
   border: 1px solid #ccc;
 }
-
 .datetime-range .edit-popover::before {
   content: '';
   display: block;
@@ -101,10 +105,19 @@
   -o-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 }
-
 .datetime-range .edit-popover.start::before {
   left: 5%;
 }
 .datetime-range .edit-popover.end::before {
   left: 90%;
 }
+
+
+/**
+ * Calendar
+ */
+
+
+/**
+ * Clock
+ */
