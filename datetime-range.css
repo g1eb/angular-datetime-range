@@ -10,6 +10,13 @@
   padding: 0;
   overflow: hidden;
   width: 100%;
+  font-family: sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #333;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  text-decoration: none;
+  text-align: center;
 }
 
 
@@ -22,15 +29,11 @@
   position: relative;
   float: left;
   padding: 0.5em 2em;
-  color: #444;
   background-color: #efefef;
   transition: background-color 0.25s ease;
   text-shadow: 0 1px 0 rgba(255,255,255,.5);
   text-decoration: none;
   text-align: center;
-  font-family: sans-serif;
-  font-size: 1em;
-  line-height: 1.5em;
 }
 .datetime-range .start-datetime.active,
 .datetime-range .start-datetime:hover,
@@ -86,7 +89,7 @@
   background: #efefef;
   border-radius: 0px;
   z-index: 15;
-  border: 1px solid #ccc;
+  box-shadow: 0 0 12px rgba(0,0,0,.35);
 }
 .datetime-range .edit-popover::before {
   content: '';
@@ -96,9 +99,8 @@
   width: 1em;
   height: 1em;
   top: -0.575em;
-  border-width: 1px 1px 0 0;
-  border-style: solid;
-  border-color: #ccc;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
   transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
