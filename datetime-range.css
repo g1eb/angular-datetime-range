@@ -28,12 +28,24 @@
   cursor: pointer;
   position: relative;
   float: left;
-  padding: 0.5em 2em;
+  padding: 0.5em 1.5em;
   background-color: #efefef;
   transition: background-color 0.25s ease;
-  text-shadow: 0 1px 0 rgba(255,255,255,.5);
-  text-decoration: none;
-  text-align: center;
+}
+.datetime-range .start-datetime .date,
+.datetime-range .end-datetime .date {
+  color: #777;
+  font-size: 1em;
+  line-height: 1em;
+  display: block;
+  overflow: hidden;
+}
+.datetime-range .start-datetime .time,
+.datetime-range .end-datetime .time {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  display: block;
+  overflow: hidden;
 }
 .datetime-range .start-datetime.active,
 .datetime-range .start-datetime:hover,
@@ -83,12 +95,13 @@
 .datetime-range .edit-popover {
   position: absolute;
   top: 80px;
-  width: 345px;
+  width: 360px;
   height: 100px;
   padding: 0px;
   background: #efefef;
   border-radius: 0px;
   z-index: 15;
+  -webkit-box-shadow: 0 0 12px rgba(0,0,0,.35);
   box-shadow: 0 0 12px rgba(0,0,0,.35);
 }
 .datetime-range .edit-popover::before {
@@ -98,9 +111,9 @@
   background-color: #efefef;
   width: 1em;
   height: 1em;
-  top: -0.575em;
-  border-top: 1px solid #ddd;
-  border-right: 1px solid #ddd;
+  top: -0.5em;
+  -webkit-box-shadow: 2px -2px 3px -1px #cacaca;
+  box-shadow: 2px -2px 3px -1px #cacaca;
   transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
