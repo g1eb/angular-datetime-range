@@ -13,7 +13,7 @@
   font-family: sans-serif;
   font-size: 1em;
   line-height: 1.5em;
-  color: #333;
+  color: #444;
   text-shadow: 0 1px 0 rgba(255,255,255,.5);
   text-decoration: none;
   text-align: center;
@@ -96,7 +96,7 @@
   position: absolute;
   top: 80px;
   width: 360px;
-  height: 100px;
+  height: auto;
   padding: 0px;
   background: #efefef;
   border-radius: 0px;
@@ -105,7 +105,7 @@
   box-shadow: 0 0 12px rgba(0,0,0,.35);
 }
 .datetime-range .edit-popover::before {
-  content: '';
+  content: "";
   display: block;
   position: relative;
   background-color: #efefef;
