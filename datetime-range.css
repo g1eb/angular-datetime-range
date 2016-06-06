@@ -29,7 +29,7 @@
 .datetime-range .end-datetime {
   cursor: pointer;
   position: relative;
-  width: 45%;
+  width: 47%;
   height: 4.4em;
   background-color: #efefef;
   transition: background-color 0.25s ease;
@@ -40,7 +40,7 @@
 }
 .datetime-range .end-datetime {
   position: absolute;
-  left: 52%;
+  left: 53%;
 }
 .datetime-range .start-datetime .date,
 .datetime-range .end-datetime .date {
@@ -103,7 +103,7 @@
 .datetime-range .edit-popover {
   position: absolute;
   top: 80px;
-  width: 360px;
+  width: 100%;
   height: auto;
   padding: 0px;
   background: #efefef;
