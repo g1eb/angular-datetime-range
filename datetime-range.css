@@ -142,5 +142,48 @@
 
 
 /**
- * Clock
+ * Timer
  */
+.datetime-range .timer {
+  width: 100%;
+  background-color: #fff;
+}
+.datetime-range .timer .timer-hours,
+.datetime-range .timer .timer-minutes,
+.datetime-range .timer .timer-seconds {
+  width: 32%;
+  display: inline-block;
+  font-size: 3em;
+  line-height: 1em;
+  position: relative;
+}
+.datetime-range .timer .timer-hours:after,
+.datetime-range .timer .timer-minutes:after {
+  content: ":";
+  position: absolute;
+  top: 1em;
+  right: -0.25em;
+}
+.datetime-range .timer .timer-hours .arrow,
+.datetime-range .timer .timer-minutes .arrow,
+.datetime-range .timer .timer-seconds .arrow {
+  color: #ddd;
+  cursor: pointer;
+  line-height: 1em;
+  font-size: 0.75em;
+}
+.datetime-range .timer .timer-hours .arrow:hover,
+.datetime-range .timer .timer-minutes .arrow:hover,
+.datetime-range .timer .timer-seconds .arrow:hover {
+  color: #999;
+}
+.datetime-range .timer .timer-hours .arrow.arrow-up,
+.datetime-range .timer .timer-minutes .arrow.arrow-up,
+.datetime-range .timer .timer-seconds .arrow.arrow-up {
+  padding-top: 0.5em;
+}
+.datetime-range .timer .timer-hours .arrow.arrow-down,
+.datetime-range .timer .timer-minutes .arrow.arrow-down,
+.datetime-range .timer .timer-seconds .arrow.arrow-down {
+  padding-bottom: 0.5em;
+}
