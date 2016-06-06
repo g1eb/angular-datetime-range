@@ -131,6 +131,14 @@
 /**
  * Calendar
  */
+.datetime-range .calendar-toggle {
+  width: 100%;
+  color: #777;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin-top: -0.5em;
+  cursor: pointer;
+}
 
 
 /**

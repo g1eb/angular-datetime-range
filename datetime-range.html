@@ -14,5 +14,6 @@
   <div class="edit-popover"
     ng-class="{'start': selected === start, 'end': selected === end}"
     ng-show="!!selected">
+    <div class="calendar-toggle">{{ selected.format('DD MMMM YYYY') }}</div>
   </div>
 </div>
