@@ -139,6 +139,31 @@
   margin-top: -0.5em;
   cursor: pointer;
 }
+.datetime-range .calendar .calendar-header {
+  background-color: #fff;
+  position: relative;
+  width: 100%;
+  font-size: 1.5em;
+  line-height: 2em;
+}
+.datetime-range .calendar .calendar-header .arrow {
+  display: inline-block;
+  color: #ddd;
+  cursor: pointer;
+  line-height: 1.5em;
+  font-size: 1.5em;
+}
+.datetime-range .calendar .calendar-header .arrow:hover {
+  color: #999;
+}
+.datetime-range .calendar .calendar-header .arrow.arrow-left {
+  position: absolute;
+  left: 0.25em;
+}
+.datetime-range .calendar .calendar-header .arrow.arrow-right {
+  position: absolute;
+  right: 0.25em;
+}
 
 
 /**

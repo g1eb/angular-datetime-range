@@ -14,7 +14,16 @@
   <div class="edit-popover"
     ng-class="{'start': selected === start, 'end': selected === end}"
     ng-show="!!selected">
-    <div class="calendar-toggle">{{ selected.format('DD MMMM YYYY') }}</div>
+    <div class="calendar-toggle">
+      {{ selected.format('DD MMMM YYYY') }}
+    </div>
+    <div class="calendar">
+      <div class="calendar-header">
+        <div class="arrow arrow-left" ng-click="selected.subtract(1, 'months')">&#9664;</div>
+        {{ selected.format('MMMM') }}
+        <div class="arrow arrow-right" ng-click="selected.add(1, 'months')">&#9654;</div>
+      </div>
+    </div>
     <div class="timer">
       <div class="timer-hours">
         <div class="arrow arrow-up" ng-click="selected.add(1, 'hours')">&#9650;</div>
