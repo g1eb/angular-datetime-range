@@ -164,6 +164,17 @@
   position: absolute;
   right: 0.25em;
 }
+.datetime-range .calendar .calendar-body .weekdays {
+  display: table;
+  width: 100%;
+  color: #777;
+  font-size: 1em;
+  line-height: 2em;
+  text-transform: uppercase;
+}
+.datetime-range .calendar .calendar-body .weekdays .weekday {
+  display: table-cell;
+}
 
 
 /**

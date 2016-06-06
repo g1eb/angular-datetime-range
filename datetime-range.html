@@ -23,6 +23,11 @@
         {{ selected.format('MMMM') }}
         <div class="arrow arrow-right" ng-click="selected.add(1, 'months')">&#9654;</div>
       </div>
+      <div class="calendar-body">
+        <div class="weekdays">
+          <span class="weekday" ng-repeat="weekday in weekdays">{{ weekday }}</span>
+        </div>
+      </div>
     </div>
     <div class="timer">
       <div class="timer-hours">
