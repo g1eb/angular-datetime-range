@@ -19,6 +19,7 @@ angular.module('g1b.datetime-range', []).
       };
     },
     controller: function ($scope) {
+      $scope.weekdays = moment.weekdaysShort();
     }
   };
 });
