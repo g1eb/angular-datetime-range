@@ -27,16 +27,25 @@
 .datetime-range .end-datetime {
   cursor: pointer;
   position: relative;
-  float: left;
-  padding: 0.5em 1.5em;
+  width: 45%;
+  height: 4.4em;
   background-color: #efefef;
   transition: background-color 0.25s ease;
+}
+.datetime-range .start-datetime {
+  position: absolute;
+  left: 0;
+}
+.datetime-range .end-datetime {
+  position: absolute;
+  left: 52%;
 }
 .datetime-range .start-datetime .date,
 .datetime-range .end-datetime .date {
   color: #777;
   font-size: 1em;
-  line-height: 1em;
+  line-height: 1.5em;
+  margin-top: 0.3em;
   display: block;
   overflow: hidden;
 }
@@ -52,9 +61,6 @@
 .datetime-range .end-datetime.active,
 .datetime-range .end-datetime:hover {
   background: #ddd;
-}
-.datetime-range .start-datetime {
-  margin-right: 1.5em;
 }
 .datetime-range .start-datetime::after {
   content: "";
