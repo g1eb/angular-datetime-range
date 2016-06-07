@@ -27,7 +27,7 @@
         <div class="weekdays">
           <span class="weekday" ng-repeat="weekday in ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] track by $index">{{ weekday }}</span>
         </div>
-        <div class="week" ng-repeat="week in 'weeks' track by $index">
+        <div class="week" ng-repeat="week in 'months' | limitTo: (selected.clone().endOf('month').week() - selected.clone().startOf('month').week()) + 1 track by $index">
           <span class="date" ng-repeat="date in 'weeeeek' track by $index"
             ng-class="{
               'active': selected.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).startOf('day').isSame(selected.clone().startOf('day')),
