@@ -198,12 +198,20 @@
   letter-spacing: 1px;
   padding: 0 1em;
 }
-.datetime-range .calendar .calendar-body .dates .date.inactive{
-  color: #ddd;
-}
-.datetime-range .calendar .calendar-body .dates .date.selected {
-  background: rgba(255, 69, 0, 0.75);
+.datetime-range .calendar .calendar-body .week .date {
+  display: inline-block;
+  cursor: pointer;
+  width: 2.5em;
+  height: 2.5em;
   border-radius: 50%;
+  transition: background-color 0.25s ease;
+}
+.datetime-range .calendar .calendar-body .week .date.active {
+  background: rgba(255, 69, 0, 0.75);
+}
+.datetime-range .calendar .calendar-body .week .date.inactive{
+  cursor: default;
+  color: #aaa;
 }
 
 
