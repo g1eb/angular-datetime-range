@@ -20,6 +20,7 @@ angular.module('g1b.datetime-range', []).
     },
     controller: function ($scope) {
       $scope.weekdays = moment.weekdaysShort();
+      $scope.dates = Array.apply(null, Array(35)).map(function(e,i){ return i+1; });
     }
   };
 });
