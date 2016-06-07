@@ -173,24 +173,30 @@
   right: 0.25em;
 }
 .datetime-range .calendar .calendar-body .weekdays {
-  display: table;
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
   color: #777;
   font-size: 1em;
   line-height: 2em;
   text-transform: uppercase;
+  padding: 0 1em;
 }
 .datetime-range .calendar .calendar-body .weekdays .weekday {
-  display: table-cell;
+  display: inline-block;
+  width: 5em;
+  height: 2.5em;
 }
-.datetime-range .calendar .calendar-body .dates .date {
-  cursor: pointer;
+.datetime-range .calendar .calendar-body .weekdays .weekday {
+  display: inline-block;
+}
+.datetime-range .calendar .calendar-body .week {
+  display: flex;
+  justify-content: space-between;
   color: #777;
   font-size: 1.5em;
   line-height: 2.5em;
   letter-spacing: 1px;
-  display: inline-block;
-  width: 14%;
+  padding: 0 1em;
 }
 .datetime-range .calendar .calendar-body .dates .date.inactive{
   color: #ddd;
