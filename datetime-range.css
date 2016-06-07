@@ -12,7 +12,6 @@
   line-height: 1.5em;
   font-size: 1em;
   font-family: sans-serif;
-  text-shadow: 0 1px 0 rgba(255,255,255,.5);
   text-decoration: none;
   text-align: center;
   user-select: none;
@@ -208,6 +207,7 @@
   transition: background-color 0.25s ease;
 }
 .datetime-range .calendar .calendar-body .week .date.active {
+  color: #efefef;
   background: rgba(255, 69, 0, 0.75);
 }
 .datetime-range .calendar .calendar-body .week .date.inactive{
