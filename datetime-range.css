@@ -211,7 +211,7 @@
   border-radius: 50%;
   transition: background-color 0.25s ease;
 }
-.datetime-range .calendar .calendar-body .week .date:hover {
+.datetime-range .calendar .calendar-body .week .date:not(.inactive):hover {
   background: #ddd;
 }
 .datetime-range .calendar .calendar-body .week .date.active {
