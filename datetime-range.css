@@ -109,8 +109,8 @@
   background: #efefef;
   border-radius: 0px;
   z-index: 15;
-  -webkit-box-shadow: 0 0 12px rgba(0,0,0,.35);
-  box-shadow: 0 0 12px rgba(0,0,0,.35);
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 .datetime-range .edit-popover::before {
   content: "";
@@ -119,9 +119,10 @@
   background-color: #efefef;
   width: 1em;
   height: 1em;
-  top: -0.5em;
-  -webkit-box-shadow: 2px -2px 3px -1px #cacaca;
-  box-shadow: 2px -2px 3px -1px #cacaca;
+  top: -0.575em;
+  border-color: #ccc;
+  border-style: solid;
+  border-width: 1px 1px 0 0;
   transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
