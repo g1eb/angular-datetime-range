@@ -25,10 +25,17 @@
       </div>
       <div class="calendar-body">
         <div class="weekdays">
-          <span class="weekday" ng-repeat="weekday in weekdays">{{ weekday }}</span>
+          <span class="weekday" ng-repeat="weekday in ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] track by $index">{{ weekday }}</span>
         </div>
-        <div class="dates">
-          <span class="date" ng-repeat="date in dates">{{ date }}</span>
+        <div class="week" ng-repeat="week in 'weeks' track by $index">
+          <span class="date" ng-repeat="date in 'weeeeek' track by $index"
+            ng-class="{
+              'active': selected.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).startOf('day').isSame(selected.clone().startOf('day')),
+              'inactive': selected.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).month() !== selected.month()
+            }"
+            ng-click="selected.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).month() === selected.month() && selected.date(selected.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).date())">
+            {{ selected.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).date() }}
+          </span>
         </div>
       </div>
     </div>
