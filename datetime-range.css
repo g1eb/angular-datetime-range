@@ -129,10 +129,10 @@
   -webkit-transform: rotate(-45deg);
 }
 .datetime-range .edit-popover.start::before {
-  left: 5%;
+  left: 22%;
 }
 .datetime-range .edit-popover.end::before {
-  left: 90%;
+  left: 75%;
 }
 
 
