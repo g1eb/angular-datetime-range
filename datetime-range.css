@@ -172,7 +172,7 @@
   width: 2em;
   height: 100%;
 }
-.datetime-range .calendar .calendar-header .arrow.arrow-left:before {
+.datetime-range .calendar .calendar-header .arrow.arrow-left::before {
   content: "";
   position: absolute;
   top: 15%;
@@ -181,7 +181,7 @@
   border-top: 0.5em solid transparent;
   border-bottom: 0.5em solid transparent;
 }
-.datetime-range .calendar .calendar-header .arrow.arrow-left:hover:before {
+.datetime-range .calendar .calendar-header .arrow.arrow-left:hover::before {
   border-right-color: #999;
 }
 .datetime-range .calendar .calendar-header .arrow.arrow-right {
@@ -190,7 +190,7 @@
   width: 2em;
   height: 100%;
 }
-.datetime-range .calendar .calendar-header .arrow.arrow-right:before {
+.datetime-range .calendar .calendar-header .arrow.arrow-right::before {
   content: "";
   position: absolute;
   top: 15%;
@@ -199,7 +199,7 @@
   border-top: 0.5em solid transparent;
   border-bottom: 0.5em solid transparent;
 }
-.datetime-range .calendar .calendar-header .arrow.arrow-right:hover:before {
+.datetime-range .calendar .calendar-header .arrow.arrow-right:hover::before {
   border-left-color: #999;
 }
 .datetime-range .calendar .calendar-body {
@@ -271,8 +271,8 @@
   line-height: 1.5em;
   position: relative;
 }
-.datetime-range .timer .timer-hours:after,
-.datetime-range .timer .timer-minutes:after {
+.datetime-range .timer .timer-hours::after,
+.datetime-range .timer .timer-minutes::after {
   content: ":";
   position: absolute;
   top: 0.75em;
@@ -289,9 +289,9 @@
   line-height: 1em;
   font-size: 0.75em;
 }
-.datetime-range .timer .timer-hours .arrow.arrow-up:before,
-.datetime-range .timer .timer-minutes .arrow.arrow-up:before,
-.datetime-range .timer .timer-seconds .arrow.arrow-up:before {
+.datetime-range .timer .timer-hours .arrow.arrow-up::before,
+.datetime-range .timer .timer-minutes .arrow.arrow-up::before,
+.datetime-range .timer .timer-seconds .arrow.arrow-up::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -300,14 +300,14 @@
   border-right: 0.5em solid transparent;
   border-bottom: 0.5em solid #ddd;
 }
-.datetime-range .timer .timer-hours .arrow.arrow-up:hover:before,
-.datetime-range .timer .timer-minutes .arrow.arrow-up:hover:before,
-.datetime-range .timer .timer-seconds .arrow.arrow-up:hover:before {
+.datetime-range .timer .timer-hours .arrow.arrow-up:hover::before,
+.datetime-range .timer .timer-minutes .arrow.arrow-up:hover::before,
+.datetime-range .timer .timer-seconds .arrow.arrow-up:hover::before {
   border-bottom-color: #999;
 }
-.datetime-range .timer .timer-hours .arrow.arrow-down:before,
-.datetime-range .timer .timer-minutes .arrow.arrow-down:before,
-.datetime-range .timer .timer-seconds .arrow.arrow-down:before {
+.datetime-range .timer .timer-hours .arrow.arrow-down::before,
+.datetime-range .timer .timer-minutes .arrow.arrow-down::before,
+.datetime-range .timer .timer-seconds .arrow.arrow-down::before {
   content: "";
   position: absolute;
   top: 0;
@@ -316,8 +316,8 @@
   border-right: 0.5em solid transparent;
   border-top: 0.5em solid #ddd;
 }
-.datetime-range .timer .timer-hours .arrow.arrow-down:hover:before,
-.datetime-range .timer .timer-minutes .arrow.arrow-down:hover:before,
-.datetime-range .timer .timer-seconds .arrow.arrow-down:hover:before {
+.datetime-range .timer .timer-hours .arrow.arrow-down:hover::before,
+.datetime-range .timer .timer-minutes .arrow.arrow-down:hover::before,
+.datetime-range .timer .timer-seconds .arrow.arrow-down:hover::before {
   border-top-color: #999;
 }
