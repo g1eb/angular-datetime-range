@@ -41,19 +41,19 @@
     </div>
     <div class="timer">
       <div class="timer-hours">
-        <div class="arrow arrow-up" ng-click="selected.add(1, 'hours') && handler(start, end)">&#9650;</div>
+        <div class="arrow arrow-up" ng-click="selected.add(1, 'hours') && handler(start, end)"></div>
         {{ selected.format('HH') }}
-        <div class="arrow arrow-down" ng-click="selected.subtract(1, 'hours') && handler(start, end)">&#9660;</div>
+        <div class="arrow arrow-down" ng-click="selected.subtract(1, 'hours') && handler(start, end)"></div>
       </div>
       <div class="timer-minutes">
-        <div class="arrow arrow-up" ng-click="selected.add(1, 'minutes') && handler(start, end)">&#9650;</div>
+        <div class="arrow arrow-up" ng-click="selected.add(1, 'minutes') && handler(start, end)"></div>
         {{ selected.format('mm') }}
-        <div class="arrow arrow-down" ng-click="selected.subtract(1, 'minutes') && handler(start, end)">&#9660;</div>
+        <div class="arrow arrow-down" ng-click="selected.subtract(1, 'minutes') && handler(start, end)"></div>
       </div>
       <div class="timer-seconds">
-        <div class="arrow arrow-up" ng-click="selected.add(1, 'seconds') && handler(start, end)">&#9650;</div>
+        <div class="arrow arrow-up" ng-click="selected.add(1, 'seconds') && handler(start, end)"></div>
         {{ selected.format('ss') }}
-        <div class="arrow arrow-down" ng-click="selected.subtract(1, 'seconds') && handler(start, end)">&#9660;</div>
+        <div class="arrow arrow-down" ng-click="selected.subtract(1, 'seconds') && handler(start, end)"></div>
       </div>
     </div>
   </div>

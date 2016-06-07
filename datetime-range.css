@@ -228,11 +228,13 @@
 .datetime-range .timer {
   width: 100%;
   background-color: #fff;
+  display: flex;
+  justify-content: space-between;
 }
 .datetime-range .timer .timer-hours,
 .datetime-range .timer .timer-minutes,
 .datetime-range .timer .timer-seconds {
-  width: 32%;
+  width: 3em;
   display: inline-block;
   font-size: 3em;
   line-height: 1em;
@@ -242,7 +244,7 @@
 .datetime-range .timer .timer-minutes:after {
   content: ":";
   position: absolute;
-  top: 1em;
+  top: 0.75em;
   right: -0.25em;
 }
 .datetime-range .timer .timer-hours .arrow,
@@ -250,21 +252,35 @@
 .datetime-range .timer .timer-seconds .arrow {
   color: #ddd;
   cursor: pointer;
+  width: 0;
+  height: 0;
+  margin: 0 1.5em;
   line-height: 1em;
   font-size: 0.75em;
-}
-.datetime-range .timer .timer-hours .arrow:hover,
-.datetime-range .timer .timer-minutes .arrow:hover,
-.datetime-range .timer .timer-seconds .arrow:hover {
-  color: #999;
 }
 .datetime-range .timer .timer-hours .arrow.arrow-up,
 .datetime-range .timer .timer-minutes .arrow.arrow-up,
 .datetime-range .timer .timer-seconds .arrow.arrow-up {
   padding-top: 0.5em;
+  border-left: 0.5em solid transparent;
+  border-right: 0.5em solid transparent;
+  border-bottom: 0.5em solid #ddd;
+}
+.datetime-range .timer .timer-hours .arrow.arrow-up:hover,
+.datetime-range .timer .timer-minutes .arrow.arrow-up:hover,
+.datetime-range .timer .timer-seconds .arrow.arrow-up:hover {
+  border-bottom-color: #999;
 }
 .datetime-range .timer .timer-hours .arrow.arrow-down,
 .datetime-range .timer .timer-minutes .arrow.arrow-down,
 .datetime-range .timer .timer-seconds .arrow.arrow-down {
   padding-bottom: 0.5em;
+  border-left: 0.5em solid transparent;
+  border-right: 0.5em solid transparent;
+  border-top: 0.5em solid #ddd;
+}
+.datetime-range .timer .timer-hours .arrow.arrow-down:hover,
+.datetime-range .timer .timer-minutes .arrow.arrow-down:hover,
+.datetime-range .timer .timer-seconds .arrow.arrow-down:hover {
+  border-top-color: #999;
 }
