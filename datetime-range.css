@@ -31,7 +31,7 @@
   width: 47%;
   height: 4.4em;
   background-color: #efefef;
-  transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease-out;
 }
 .datetime-range .start-datetime {
   position: absolute;
@@ -209,7 +209,7 @@
   width: 2.5em;
   height: 2.5em;
   border-radius: 50%;
-  transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease-out;
 }
 .datetime-range .calendar .calendar-body .week .date:not(.active):not(.inactive):hover {
   background-color: #ddd;
