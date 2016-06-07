@@ -125,6 +125,7 @@
   font-size: 1.5em;
   line-height: 2em;
   cursor: pointer;
+  transition: background-color 0.25s ease-out;
 }
 .datetime-range .calendar-toggle::before {
   content: "";
@@ -142,6 +143,7 @@
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
+  transition: background-color 0.25s ease-out;
 }
 .datetime-range .calendar-toggle:hover,
 .datetime-range .calendar-toggle:hover::before {
@@ -182,6 +184,7 @@
   border-right: 0.75em solid #ddd;
   border-top: 0.5em solid transparent;
   border-bottom: 0.5em solid transparent;
+  transition: border 0.25s ease-out;
 }
 .datetime-range .calendar .calendar-header .arrow.arrow-left:hover::before {
   border-right-color: #999;
@@ -200,6 +203,7 @@
   border-left: 0.75em solid #ddd;
   border-top: 0.5em solid transparent;
   border-bottom: 0.5em solid transparent;
+  transition: border 0.25s ease-out;
 }
 .datetime-range .calendar .calendar-header .arrow.arrow-right:hover::before {
   border-left-color: #999;
@@ -301,6 +305,7 @@
   border-left: 0.5em solid transparent;
   border-right: 0.5em solid transparent;
   border-bottom: 0.5em solid #ddd;
+  transition: border 0.25s ease-out;
 }
 .datetime-range .timer .timer-hours .arrow.arrow-up:hover::before,
 .datetime-range .timer .timer-minutes .arrow.arrow-up:hover::before,
@@ -317,6 +322,7 @@
   border-left: 0.5em solid transparent;
   border-right: 0.5em solid transparent;
   border-top: 0.5em solid #ddd;
+  transition: border 0.25s ease-out;
 }
 .datetime-range .timer .timer-hours .arrow.arrow-down:hover::before,
 .datetime-range .timer .timer-minutes .arrow.arrow-down:hover::before,
