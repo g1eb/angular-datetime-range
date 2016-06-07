@@ -174,7 +174,7 @@
   right: 0.25em;
 }
 .datetime-range .calendar .calendar-body {
-  padding-bottom: 0.5em;
+  padding: 0.5em 0;
 }
 .datetime-range .calendar .calendar-body .weekdays {
   cursor: default;
