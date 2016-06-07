@@ -211,14 +211,14 @@
   border-radius: 50%;
   transition: background-color 0.25s ease;
 }
-.datetime-range .calendar .calendar-body .week .date:not(.inactive):hover {
-  background: #ddd;
+.datetime-range .calendar .calendar-body .week .date:not(.active):not(.inactive):hover {
+  background-color: #ddd;
 }
 .datetime-range .calendar .calendar-body .week .date.active {
   color: #efefef;
-  background: rgba(255, 69, 0, 0.75);
+  background-color: rgba(255, 69, 0, 0.75);
 }
-.datetime-range .calendar .calendar-body .week .date.inactive{
+.datetime-range .calendar .calendar-body .week .date.inactive {
   cursor: default;
   color: #aaa;
 }
