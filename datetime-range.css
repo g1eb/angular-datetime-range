@@ -148,6 +148,7 @@
   cursor: pointer;
 }
 .datetime-range .calendar .calendar-header {
+  cursor: default;
   background-color: #fff;
   position: relative;
   width: 100%;
@@ -176,6 +177,7 @@
   padding-bottom: 0.5em;
 }
 .datetime-range .calendar .calendar-body .weekdays {
+  cursor: default;
   display: flex;
   justify-content: space-between;
   color: #777;
@@ -234,6 +236,7 @@
 .datetime-range .timer .timer-hours,
 .datetime-range .timer .timer-minutes,
 .datetime-range .timer .timer-seconds {
+  cursor: default;
   width: 3em;
   display: inline-block;
   font-size: 3em;
