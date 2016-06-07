@@ -11,10 +11,10 @@
     <div class="date">{{ end.format('DD MMMM YYYY') }}</div>
     <div class="time">{{ end.format('HH : mm : ss') }}</div>
   </div>
-  <div class="edit-popover"
-    ng-class="{'start': selected === start, 'end': selected === end}"
-    ng-show="!!selected">
-    <div class="calendar-toggle" ng-click="calendar_active = !calendar_active">
+  <div class="edit-popover" ng-show="!!selected">
+    <div class="calendar-toggle"
+      ng-class="{'start': selected === start, 'end': selected === end}"
+      ng-click="calendar_active = !calendar_active">
       {{ selected.format('DD MMMM YYYY') }}
     </div>
     <div class="calendar" ng-show="!!calendar_active">
