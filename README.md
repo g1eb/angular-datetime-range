@@ -1,11 +1,23 @@
 # Datetime range input UI element
 
-This datetime range input is used to fascilitate easy input of datetime objects representing a range with a start datetime and end datetime.
- 
+This directive is designed to provide easy and intuitive input of moment.js datetime objects.
+
+Typically this can be used to represent a start and an end datetime object.   
+Desgined to be as simple as possible to afford intuitive interactions.
+
 Converted into an angular directive for your convenience :)
 
 ## Demo
 Click <a href="https://rawgit.com/g1eb/angular-datetime-range/master/" target="_blank">here</a> for a live demo.
+
+### Closed state
+[![Angular directive for datetime range input - closed state](https://raw.githubusercontent.com/g1eb/angular-datetime-range/master/screenshot_state_1.png)](https://rawgit.com/g1eb/angular-datetime-range/master/)
+
+### Open edit time state
+[![Angular directive for datetime range input - open edit time state](https://raw.githubusercontent.com/g1eb/angular-datetime-range/master/screenshot_state_2.png)](https://rawgit.com/g1eb/angular-datetime-range/master/)
+
+### Open edit calendar state
+[![Angular directive for datetime range input - open edit calendar state](https://raw.githubusercontent.com/g1eb/angular-datetime-range/master/screenshot_state_3.png)](https://rawgit.com/g1eb/angular-datetime-range/master/)
 
 ## Installation
 
@@ -35,11 +47,9 @@ angular.module('myApp', [
 
 |Property        | Usage           | Default  | Required |
 |:------------- |:-------------|:-----:|:-----:|
-| start_datetime | Start datetime object | none | yes |
-| end_datetime | End datetime object | none | yes |
-| handler | Handler function is fired on blur of the editing panel, start_datetime and end_datetime are passed as arguments, can be used to save changed datetime objects or do something else with it | none | no |
-
-### Example data
+| start_datetime | Start moment.js datetime object | none | no |
+| end_datetime | End moment.js datetime object | none | no |
+| handler | Handler function is fired on change of start and/or end datetime objects | none | no |
 
 ## Dependencies
 
