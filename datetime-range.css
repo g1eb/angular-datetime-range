@@ -162,16 +162,41 @@
   line-height: 1.5em;
   font-size: 1.5em;
 }
-.datetime-range .calendar .calendar-header .arrow:hover {
-  color: #999;
-}
 .datetime-range .calendar .calendar-header .arrow.arrow-left {
   position: absolute;
-  left: 0.25em;
+  left: 0;
+  width: 2em;
+  height: 100%;
+}
+.datetime-range .calendar .calendar-header .arrow.arrow-left:before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  border-right: 0.75em solid #ddd;
+  border-top: 0.5em solid transparent;
+  border-bottom: 0.5em solid transparent;
+}
+.datetime-range .calendar .calendar-header .arrow.arrow-left:hover:before {
+  border-right-color: #999;
 }
 .datetime-range .calendar .calendar-header .arrow.arrow-right {
   position: absolute;
-  right: 0.25em;
+  right: 0;
+  width: 2em;
+  height: 100%;
+}
+.datetime-range .calendar .calendar-header .arrow.arrow-right:before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  right: 25%;
+  border-left: 0.75em solid #ddd;
+  border-top: 0.5em solid transparent;
+  border-bottom: 0.5em solid transparent;
+}
+.datetime-range .calendar .calendar-header .arrow.arrow-right:hover:before {
+  border-left-color: #999;
 }
 .datetime-range .calendar .calendar-body {
   padding: 0.5em 0;

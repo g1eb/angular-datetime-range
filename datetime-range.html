@@ -19,9 +19,9 @@
     </div>
     <div class="calendar" ng-show="!!calendar_active">
       <div class="calendar-header">
-        <div class="arrow arrow-left" ng-click="selected.subtract(1, 'months') && handler(start, end)">&#9664;</div>
+        <div class="arrow arrow-left" ng-click="selected.subtract(1, 'months') && handler(start, end)"></div>
         {{ selected.format('MMMM') }}
-        <div class="arrow arrow-right" ng-click="selected.add(1, 'months') && handler(start, end)">&#9654;</div>
+        <div class="arrow arrow-right" ng-click="selected.add(1, 'months') && handler(start, end)"></div>
       </div>
       <div class="calendar-body">
         <div class="weekdays">
