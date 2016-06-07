@@ -183,6 +183,22 @@
 .datetime-range .calendar .calendar-body .weekdays .weekday {
   display: table-cell;
 }
+.datetime-range .calendar .calendar-body .dates .date {
+  cursor: pointer;
+  color: #777;
+  font-size: 1.5em;
+  line-height: 2.5em;
+  letter-spacing: 1px;
+  display: inline-block;
+  width: 14%;
+}
+.datetime-range .calendar .calendar-body .dates .date.inactive{
+  color: #ddd;
+}
+.datetime-range .calendar .calendar-body .dates .date.selected {
+  background: rgba(255, 69, 0, 0.75);
+  border-radius: 50%;
+}
 
 
 /**
