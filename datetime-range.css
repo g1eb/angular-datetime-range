@@ -240,7 +240,7 @@
   width: 3em;
   display: inline-block;
   font-size: 3em;
-  line-height: 1em;
+  line-height: 1.5em;
   position: relative;
 }
 .datetime-range .timer .timer-hours:after,
