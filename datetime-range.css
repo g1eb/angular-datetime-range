@@ -172,6 +172,9 @@
   position: absolute;
   right: 0.25em;
 }
+.datetime-range .calendar .calendar-body {
+  padding-bottom: 0.5em;
+}
 .datetime-range .calendar .calendar-body .weekdays {
   display: flex;
   justify-content: space-between;
@@ -205,6 +208,9 @@
   height: 2.5em;
   border-radius: 50%;
   transition: background-color 0.25s ease;
+}
+.datetime-range .calendar .calendar-body .week .date:hover {
+  background: #ddd;
 }
 .datetime-range .calendar .calendar-body .week .date.active {
   color: #efefef;
