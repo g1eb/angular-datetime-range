@@ -11,7 +11,7 @@
   padding: 0;
   color: #444;
   line-height: 1.5em;
-  font-size: 1em;
+  font-size: 16px;
   font-family: sans-serif;
   text-decoration: none;
   text-align: center;
@@ -51,7 +51,7 @@
   color: #777;
   font-size: 1em;
   line-height: 1.5em;
-  margin-top: 0.3em;
+  margin-top: 0.5em;
   display: block;
   overflow: hidden;
 }
