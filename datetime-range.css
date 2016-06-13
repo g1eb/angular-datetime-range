@@ -5,7 +5,6 @@
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 4.4em;
   margin: 0;
   padding: 0;
   color: #444;
@@ -33,7 +32,7 @@
   cursor: pointer;
   position: relative;
   width: 47%;
-  height: 4.4em;
+  height: 4em;
   background-color: #efefef;
   transition: background-color 0.25s ease-out;
 }
@@ -50,7 +49,7 @@
   color: #777;
   font-size: 1em;
   line-height: 1.5em;
-  margin-top: 0.5em;
+  margin-top: 0.3em;
   display: block;
   overflow: hidden;
 }
@@ -70,10 +69,9 @@
 .datetime-range .start-datetime::after {
   content: "";
   position: absolute;
-  top: 50%;
-  margin-top: -2.2em;
-  border-top: 2.2em solid transparent;
-  border-bottom: 2.2em solid transparent;
+  top: 0;
+  border-top: 2em solid transparent;
+  border-bottom: 2em solid transparent;
   border-left: 1em solid #efefef;
   transition: border-left 0.25s ease;
   right: -1em;
@@ -85,9 +83,8 @@
 .datetime-range .end-datetime::before {
   content: "";
   position: absolute;
-  top: 50%;
-  margin-top: -2.2em;
-  border-width: 2.2em 0 2.2em 1em;
+  top: 0;
+  border-width: 2em 0 2em 1em;
   border-style: solid;
   border-color: #efefef #efefef #efefef transparent;
   transition: border-color 0.25s ease;
