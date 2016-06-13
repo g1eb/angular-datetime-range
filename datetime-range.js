@@ -11,6 +11,23 @@ angular.module('g1b.datetime-range', []).
       handler: '='
     },
     replace: true,
-    templateUrl: 'datetime-range.html'
+    templateUrl: 'datetime-range.html',
+    compile: function () {
+      return {
+        pre: function preLink() {},
+        post: function postLink(scope) {
+
+          // Convert start datetime to moment.js if its not a moment object yet
+          if ( !scope.start._isAMomentObject ) {
+            scope.start = moment(scope.start);
+          }
+
+          // Convert end datetime to moment.js if its not a moment object yet
+          if ( !scope.end._isAMomentObject ) {
+            scope.end = moment(scope.end);
+          }
+        }
+      };
+    }
   };
 });
