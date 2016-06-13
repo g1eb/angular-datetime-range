@@ -105,6 +105,7 @@
  */
 .datetime-range .edit-popover {
   position: absolute;
+  z-index: 5;
   top: 5em;
   width: 100%;
   height: auto;
@@ -136,6 +137,7 @@
   height: 1em;
   top: -0.55em;
   left: 45%;
+  z-index: 2;
   border-color: #aaa;
   border-style: solid;
   border-width: 1px 1px 0 0;
