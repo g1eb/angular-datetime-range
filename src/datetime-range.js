@@ -26,9 +26,6 @@ angular.module('g1b.datetime-range', []).
           if ( !scope.end._isAMomentObject ) {
             scope.end = moment(scope.end);
           }
-
-          // Short names for weekdays
-          scope.weekdays = moment.weekdaysShort();
         }
       };
     }

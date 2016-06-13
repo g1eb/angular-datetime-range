@@ -25,8 +25,8 @@
       </div>
       <div class="calendar-body">
         <div class="weekdays">
-          <span class="weekday" ng-repeat="weekday in weekdays">
-            {{ weekday }}
+          <span class="weekday" ng-repeat="weekday in 'weeeeek' track by $index">
+            {{ selected.clone().startOf('week').add($index, 'days').format('ddd') }}
           </span>
         </div>
         <div class="week" ng-repeat="week in 'months' | limitTo: (selected.clone().endOf('month').week() - selected.clone().startOf('month').week()) + 1 track by $index">
