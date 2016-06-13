@@ -5,8 +5,8 @@
   ],
   "description": "UI widget for datetime range input, converted to an angular directive for your convenience.",
   "main": [
-    "datetime-range.js",
-    "datetime-range.css"
+    "dist/datetime-range.js",
+    "dist/datetime-range.css"
   ],
   "moduleType": [],
   "keywords": [
