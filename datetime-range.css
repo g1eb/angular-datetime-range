@@ -276,12 +276,9 @@
   line-height: 1.5em;
   position: relative;
 }
-.datetime-range .timer .timer-hours::after,
-.datetime-range .timer .timer-minutes::after {
-  content: ":";
-  position: absolute;
-  top: 0.75em;
-  right: -1em;
+.datetime-range .timer .timer-divider {
+  font-size: 3em;
+  line-height: 3em;
 }
 .datetime-range .timer .timer-hours .arrow,
 .datetime-range .timer .timer-minutes .arrow,
