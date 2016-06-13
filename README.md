@@ -10,15 +10,6 @@ Converted into an angular directive for your convenience :)
 ## Demo
 Click <a href="https://rawgit.com/g1eb/angular-datetime-range/master/" target="_blank">here</a> for a live demo.
 
-### Closed state
-[![Angular directive for datetime range input - closed state](https://raw.githubusercontent.com/g1eb/angular-datetime-range/master/screenshot_state_1.png)](https://rawgit.com/g1eb/angular-datetime-range/master/)
-
-### Open edit time state
-[![Angular directive for datetime range input - open edit time state](https://raw.githubusercontent.com/g1eb/angular-datetime-range/master/screenshot_state_2.png)](https://rawgit.com/g1eb/angular-datetime-range/master/)
-
-### Open edit calendar state
-[![Angular directive for datetime range input - open edit calendar state](https://raw.githubusercontent.com/g1eb/angular-datetime-range/master/screenshot_state_3.png)](https://rawgit.com/g1eb/angular-datetime-range/master/)
-
 ## Installation
 
 1) Install 'angular-datetime-range' with bower
