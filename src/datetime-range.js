@@ -8,7 +8,7 @@ angular.module('g1b.datetime-range', []).
     scope: {
       start: '=',
       end: '=',
-      handler: '='
+      handler: '&'
     },
     replace: true,
     templateUrl: 'datetime-range.html',
