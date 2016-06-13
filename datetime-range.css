@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0;
   color: #444;
-  font-size: 12px;
+  font-size: 14px;
   font-family: sans-serif;
   text-decoration: none;
   text-align: center;
@@ -56,7 +56,7 @@
 .datetime-range .start-datetime .time,
 .datetime-range .end-datetime .time {
   font-size: 1.5em;
-  line-height: 1.5em;
+  line-height: 1.75em;
   display: block;
   overflow: hidden;
 }
@@ -102,7 +102,7 @@
 .datetime-range .edit-popover {
   position: absolute;
   z-index: 5;
-  top: 5em;
+  top: 4.5em;
   width: 100%;
   height: auto;
   padding: 0;
@@ -232,10 +232,10 @@
   display: flex;
   justify-content: space-between;
   color: #777;
-  font-size: 1.5em;
+  font-size: 1.25em;
   line-height: 2.5em;
   letter-spacing: 1px;
-  padding: 0 1em;
+  padding: 0.5em 1em;
 }
 .datetime-range .calendar .calendar-body .week .date {
   display: inline-block;
