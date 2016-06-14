@@ -24,14 +24,14 @@ bower install angular-datetime-range
 ```javascript
 angular.module('myApp', [
   'g1b.datetime-range',
-  .....
+  ......
 ])
 ```
 
 3) Use 'datetime-range' directive in a view
 
 ```html
-<datetime-range start="start_datetime" end="end_datetime" handler="print"></datetime-range>
+<datetime-range start="start_datetime" end="end_datetime" handler="print(start_datetime, end_datetime)"></datetime-range>
 ```
 
 ### Attributes
