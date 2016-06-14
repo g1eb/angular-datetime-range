@@ -11,7 +11,7 @@ angular.module('g1b.datetime-range', []).
       handler: '&'
     },
     replace: true,
-    templateUrl: 'datetime-range.html',
+    templateUrl: './datetime-range.html',
     compile: function () {
       return {
         pre: function preLink() {},
