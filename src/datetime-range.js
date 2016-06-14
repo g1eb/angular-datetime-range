@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('g1b.datetime-range', []).
-  directive('datetimeRange', function () {
+  directive('datetimeRange', ['$document', function ($document) {
 
   return {
     restrict: 'E',
@@ -15,7 +15,7 @@ angular.module('g1b.datetime-range', []).
     compile: function () {
       return {
         pre: function preLink() {},
-        post: function postLink(scope) {
+        post: function postLink(scope, element) {
 
           // Convert start datetime to moment.js if its not a moment object yet
           if ( !scope.start._isAMomentObject ) {
@@ -26,8 +26,18 @@ angular.module('g1b.datetime-range', []).
           if ( !scope.end._isAMomentObject ) {
             scope.end = moment(scope.end);
           }
+
+          // Bind click events outside directive to close edit popover
+          $document.on('click', function (e) {
+            if ( !!scope.selected && !element[0].contains(e.target) ) {
+              scope.$apply(function () {
+                scope.selected = '';
+                scope.calendar_active = false;
+              });
+            }
+          });
         }
       };
     }
   };
-});
+}]);
