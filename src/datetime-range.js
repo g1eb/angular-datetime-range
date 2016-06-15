@@ -31,7 +31,7 @@ angular.module('g1b.datetime-range', []).
           }
 
           // Bind click events outside directive to close edit popover
-          $document.on('click', function (e) {
+          $document.on('mousedown', function (e) {
             if ( !!scope.selected && !element[0].contains(e.target) ) {
               scope.$apply(function () {
                 scope.selected = '';
