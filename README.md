@@ -38,8 +38,8 @@ angular.module('myApp', [
 
 |Property        | Usage           | Default  | Required |
 |:------------- |:-------------|:-----:|:-----:|
-| start_datetime | Start moment.js datetime object | none | no |
-| end_datetime | End moment.js datetime object | none | no |
+| start_datetime | Start moment.js datetime object or a datetime string | none | yes |
+| end_datetime | End moment.js datetime object or a datetime string | none | no |
 | handler | Handler function is fired on change of start and/or end datetime objects | none | no |
 
 ## Dependencies
