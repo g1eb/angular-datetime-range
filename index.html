@@ -27,7 +27,7 @@
     angular.module('ExampleApp', ['g1b.datetime-range']).
       controller('MainCtrl', function ($scope) {
         $scope.start_datetime = moment();
-        $scope.end_datetime = moment().add(1, 'hours');
+        $scope.end_datetime = moment().add(1, 'days').add(1, 'hours');
         $scope.print = function (start_datetime, end_datetime) {
           console.log('start', start_datetime);
           console.log('end', end_datetime);
