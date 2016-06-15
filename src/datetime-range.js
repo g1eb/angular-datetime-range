@@ -18,12 +18,12 @@ angular.module('g1b.datetime-range', []).
         post: function postLink(scope, element) {
 
           // Convert start datetime to moment.js if its not a moment object yet
-          if ( !scope.start._isAMomentObject ) {
+          if ( scope.start && !scope.start._isAMomentObject ) {
             scope.start = moment(scope.start);
           }
 
           // Convert end datetime to moment.js if its not a moment object yet
-          if ( !scope.end._isAMomentObject ) {
+          if ( scope.end && !scope.end._isAMomentObject ) {
             scope.end = moment(scope.end);
           }
 
