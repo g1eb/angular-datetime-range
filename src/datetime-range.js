@@ -17,6 +17,9 @@ angular.module('g1b.datetime-range', []).
         pre: function preLink() {},
         post: function postLink(scope, element) {
 
+          // Get current date
+          scope.current = moment();
+
           // Convert start datetime to moment.js if its not a moment object yet
           if ( scope.start && !scope.start._isAMomentObject ) {
             scope.start = moment(scope.start);

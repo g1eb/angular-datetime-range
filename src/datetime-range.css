@@ -245,6 +245,9 @@
   border-radius: 50%;
   transition: background-color 0.25s ease-out;
 }
+.datetime-range .calendar .calendar-body .week .date.current {
+  color: #444;
+}
 .datetime-range .calendar .calendar-body .week .date:not(.active):not(.inactive):hover {
   background-color: #ddd;
 }
