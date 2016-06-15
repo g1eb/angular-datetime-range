@@ -17,7 +17,7 @@
 </head>
 <body ng-controller="MainCtrl">
 
-  <datetime-range start="start_datetime" end="end_datetime" handler="print(start_datetime, end_datetime)"></datetime-range>
+  <datetime-range start="start" end="end" handler="print(start, end)"></datetime-range>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js" charset="utf-8"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js" charset="utf-8"></script>
@@ -26,11 +26,11 @@
   <script>
     angular.module('ExampleApp', ['g1b.datetime-range']).
       controller('MainCtrl', function ($scope) {
-        $scope.start_datetime = moment();
-        $scope.end_datetime = moment().add(1, 'days').add(1, 'hours');
-        $scope.print = function (start_datetime, end_datetime) {
-          console.log('start', start_datetime);
-          console.log('end', end_datetime);
+        $scope.start = moment();
+        $scope.end = moment().add(1, 'days').add(1, 'hours');
+        $scope.print = function (start, end) {
+          console.log('start', start);
+          console.log('end', end);
         };
       });
   </script>
