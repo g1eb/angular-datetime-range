@@ -248,7 +248,7 @@
 .datetime-range .calendar .calendar-body .week .date.current {
   color: #444;
 }
-.datetime-range .calendar .calendar-body .week .date:not(.active):not(.inactive):hover {
+.datetime-range .calendar .calendar-body .week .date:not(.active):hover {
   background-color: #ddd;
 }
 .datetime-range .calendar .calendar-body .week .date.active {
@@ -256,7 +256,6 @@
   background-color: rgba(255, 69, 0, 0.75);
 }
 .datetime-range .calendar .calendar-body .week .date.inactive {
-  cursor: default;
   color: #aaa;
 }
 
