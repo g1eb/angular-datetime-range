@@ -20,6 +20,15 @@ angular.module('g1b.datetime-range', []).
           // Get current date
           scope.current = moment();
 
+          // Set selected date
+          scope.setDate = function (date) {
+            if ( (scope.selected === scope.start && date < scope.end) ||
+              ( scope.selected === scope.end && date > scope.start ) ) {
+              scope.selected.seconds(date.get('seconds')).minute(date.get('minutes')).hours(date.get('hours')).date(date.get('date')).month(date.get('month')).year(date.get('year'));
+              scope.handler();
+            }
+          };
+
           // Convert start datetime to moment.js if its not a moment object yet
           if ( scope.start && !scope.start._isAMomentObject ) {
             scope.start = moment(scope.start);
