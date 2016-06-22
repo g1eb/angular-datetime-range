@@ -21,10 +21,11 @@ angular.module('g1b.datetime-range', []).
           scope.current = moment();
 
           // Set selected date
-          scope.setDate = function (date) {
-            if ( (scope.selected === scope.start && date < scope.end) ||
-              ( scope.selected === scope.end && date > scope.start ) ) {
-              scope.selected.seconds(date.get('seconds')).minute(date.get('minutes')).hours(date.get('hours')).date(date.get('date')).month(date.get('month')).year(date.get('year'));
+          scope.updateDate = function (unit, value) {
+            var _date = scope.selected.clone()[unit](value);
+            if ( ( scope.selected === scope.start && _date < scope.end) ||
+              ( scope.selected === scope.end && _date > scope.start ) ) {
+              scope.selected[unit](_date[unit]());
               scope.handler();
             }
           };
