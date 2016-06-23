@@ -36,7 +36,7 @@
               'active': selected.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).startOf('day').isSame(selected.clone().startOf('day')),
               'inactive': selected.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).month() !== selected.month()
             }"
-            ng-click="setDate(selected.clone().date(selected.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).date()).month(selected.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).month()))">
+            ng-click="setDate(selected.clone().month(selected.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).month()).date(selected.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).date()))">
             {{ selected.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).date() }}
           </span>
         </div>
