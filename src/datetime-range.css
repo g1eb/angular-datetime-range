@@ -73,7 +73,7 @@
   border-top: 2em solid transparent;
   border-bottom: 2em solid transparent;
   border-left: 1em solid #efefef;
-  transition: border-left 0.25s ease;
+  transition: border-left 0.25s ease-out;
   right: -1em;
 }
 .datetime-range .start-datetime.active::after,
@@ -87,7 +87,7 @@
   border-width: 2em 0 2em 1em;
   border-style: solid;
   border-color: #efefef #efefef #efefef transparent;
-  transition: border-color 0.25s ease;
+  transition: border-color 0.25s ease-out;
   left: -1em;
 }
 .datetime-range .end-datetime.active::before,
