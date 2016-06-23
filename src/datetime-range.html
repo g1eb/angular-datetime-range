@@ -37,7 +37,7 @@
               'active': _date.isSame(selected.clone().startOf('day')),
               'inactive': _date.month() !== selected.month()
             }"
-            ng-click="updateDate('month', _date.month()) && updateDate('date', _date.date()) && updateDate('month', _date.month())">
+            ng-click="updateDate('date', _date.date()); updateDate('month', _date.month())">
             {{ _date.date() }}
           </span>
         </div>
