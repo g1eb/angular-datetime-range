@@ -21,6 +21,16 @@ angular.module('g1b.datetime-range', []).
           scope.current = moment();
 
           // Set selected date
+          scope.selectDate = function (date) {
+            if ( scope.selected === date ) {
+              scope.selected = undefined;
+            } else {
+              scope.selected = date;
+              scope.calendar = scope.selected.clone();
+            }
+          };
+
+          // Update selected date
           scope.setDate = function (date) {
             if ( scope.selected.isSame(date) ) { return; }
             if ( ( scope.selected === scope.start && date < scope.end ) || ( scope.selected === scope.end && date > scope.start ) ) {

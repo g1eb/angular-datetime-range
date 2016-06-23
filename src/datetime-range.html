@@ -1,12 +1,12 @@
 <div class="datetime-range">
   <div class="start-datetime"
-    ng-click="selected = ( selected === start ) ? '' : start"
+    ng-click="selectDate(start)"
     ng-class="{'active': selected === start, 'warning': warning === 'start' }">
     <div class="date">{{ start.format('DD MMMM YYYY') }}</div>
     <div class="time">{{ start.format('HH : mm : ss') }}</div>
   </div>
   <div class="end-datetime"
-    ng-click="selected = ( selected === end ) ? '' : end"
+    ng-click="selectDate(end)"
     ng-class="{'active': selected === end, 'warning': warning === 'end'}">
     <div class="date">{{ end.format('DD MMMM YYYY') }}</div>
     <div class="time">{{ end.format('HH : mm : ss') }}</div>
