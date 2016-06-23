@@ -22,9 +22,9 @@ angular.module('g1b.datetime-range', []).
 
           // Set selected date
           scope.setDate = function (date) {
-            if ( !scope.selected.isSame(date) &&
-            ( ( scope.selected === scope.start && date < scope.end) ||
-              ( scope.selected === scope.end && date > scope.start ) ) ) {
+            if ( scope.selected.isSame(date) ) { return; }
+            if ( ( scope.selected === scope.start && date < scope.end ) ||
+              ( scope.selected === scope.end && date > scope.start ) ) {
               scope.selected.year(date.year());
               scope.selected.month(date.month());
               scope.selected.date(date.date());
