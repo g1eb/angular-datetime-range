@@ -94,6 +94,30 @@
 .datetime-range .end-datetime:hover::before {
   border-color: #ddd #ddd #ddd transparent;
 }
+.datetime-range .start-datetime.warning,
+.datetime-range .end-datetime.warning {
+  background-color: #ff362e;
+}
+.datetime-range .start-datetime.warning.active,
+.datetime-range .start-datetime.warning:hover,
+.datetime-range .end-datetime.warning.active,
+.datetime-range .end-datetime.warning:hover {
+  background-color: #ff362e;
+}
+.datetime-range .start-datetime.warning::after {
+  border-left-color: #ff362e;
+}
+.datetime-range .start-datetime.warning.active::after,
+.datetime-range .start-datetime.warning:hover::after {
+  border-left-color: #ff362e;
+}
+.datetime-range .end-datetime.warning::before {
+  border-color: #ff362e #ff362e #ff362e transparent;
+}
+.datetime-range .end-datetime.warning.active::before,
+.datetime-range .end-datetime.warning:hover::before {
+  border-color: #ff362e #ff362e #ff362e transparent;
+}
 
 
 /**
