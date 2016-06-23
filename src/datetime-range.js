@@ -23,14 +23,8 @@ angular.module('g1b.datetime-range', []).
           // Set selected date
           scope.setDate = function (date) {
             if ( scope.selected.isSame(date) ) { return; }
-            if ( ( scope.selected === scope.start && date < scope.end ) ||
-              ( scope.selected === scope.end && date > scope.start ) ) {
-              scope.selected.year(date.year());
-              scope.selected.month(date.month());
-              scope.selected.date(date.date());
-              scope.selected.hours(date.hours());
-              scope.selected.minutes(date.minutes());
-              scope.selected.seconds(date.seconds());
+            if ( ( scope.selected === scope.start && date < scope.end ) || ( scope.selected === scope.end && date > scope.start ) ) {
+              scope.selected.year(date.year()).month(date.month()).date(date.date()).hours(date.hours()).minutes(date.minutes()).seconds(date.seconds());
               scope.handler();
             } else {
               scope.warning = ( scope.selected === scope.start ) ? 'end' : 'start';
