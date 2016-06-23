@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('g1b.datetime-range', []).
-  directive('datetimeRange', ['$document', function ($document) {
+  directive('datetimeRange', ['$document', '$timeout', function ($document, $timeout) {
 
   return {
     restrict: 'E',
@@ -32,6 +32,11 @@ angular.module('g1b.datetime-range', []).
               scope.selected.minutes(date.minutes());
               scope.selected.seconds(date.seconds());
               scope.handler();
+            } else {
+              scope.warning = ( scope.selected === scope.start ) ? 'end' : 'start';
+              $timeout(function () {
+                scope.warning = undefined;
+              }, 250);
             }
           };
 
