@@ -19,9 +19,9 @@
     </div>
     <div class="calendar" ng-show="!!calendar_active">
       <div class="calendar-header">
-        <div class="arrow arrow-left" ng-click="updateDate('month', selected.clone().subtract(1, 'months').month())"></div>
+        <div class="arrow arrow-left" ng-click="setDate(selected.clone().subtract(1, 'months'))"></div>
         {{ selected.format('MMMM') }}
-        <div class="arrow arrow-right" ng-click="updateDate('month', selected.clone().add(1, 'months').month())"></div>
+        <div class="arrow arrow-right" ng-click="setDate(selected.clone().add(1, 'months'))"></div>
       </div>
       <div class="calendar-body">
         <div class="weekdays">
@@ -31,35 +31,34 @@
         </div>
         <div class="week" ng-repeat="week in 'months' | limitTo: ((selected.clone().endOf('month').week() - selected.clone().startOf('month').week()) + 1) track by $index">
           <span class="date" ng-repeat="date in 'weeeeek' track by $index"
-            ng-init="_date = selected.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).startOf('day')"
             ng-class="{
-              'current': _date.isSame(current.clone().startOf('day')),
-              'active': _date.isSame(selected.clone().startOf('day')),
-              'inactive': _date.month() !== selected.month()
+              'current': selected.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).startOf('day').isSame(current.clone().startOf('day')),
+              'active': selected.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).startOf('day').isSame(selected.clone().startOf('day')),
+              'inactive': selected.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).month() !== selected.month()
             }"
-            ng-click="updateDate('date', _date.date()); updateDate('month', _date.month())">
-            {{ _date.date() }}
+            ng-click="setDate(selected.clone().date(selected.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).date()).month(selected.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).month()))">
+            {{ selected.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).date() }}
           </span>
         </div>
       </div>
     </div>
     <div class="timer">
       <div class="timer-hours">
-        <div class="arrow arrow-up" ng-click="updateDate('hours', selected.clone().add(1, 'hours').hours())"></div>
+        <div class="arrow arrow-up" ng-click="setDate(selected.clone().add(1, 'hours'))"></div>
         {{ selected.format('HH') }}
-        <div class="arrow arrow-down" ng-click="updateDate('hours', selected.clone().subtract(1, 'hours').hours())"></div>
+        <div class="arrow arrow-down" ng-click="setDate(selected.clone().subtract(1, 'hours'))"></div>
       </div>
       <div class="timer-divider">:</div>
       <div class="timer-minutes">
-        <div class="arrow arrow-up" ng-click="updateDate('minutes', selected.clone().add(1, 'minutes').minutes())"></div>
+        <div class="arrow arrow-up" ng-click="setDate(selected.clone().add(1, 'minutes'))"></div>
         {{ selected.format('mm') }}
-        <div class="arrow arrow-down" ng-click="updateDate('minutes', selected.clone().subtract(1, 'minutes').minutes())"></div>
+        <div class="arrow arrow-down" ng-click="setDate(selected.clone().subtract(1, 'minutes'))"></div>
       </div>
       <div class="timer-divider">:</div>
       <div class="timer-seconds">
-        <div class="arrow arrow-up" ng-click="updateDate('seconds', selected.clone().add(1, 'seconds').seconds())"></div>
+        <div class="arrow arrow-up" ng-click="setDate(selected.clone().add(1, 'seconds'))"></div>
         {{ selected.format('ss') }}
-        <div class="arrow arrow-down" ng-click="updateDate('seconds', selected.clone().subtract(1, 'seconds').seconds())"></div>
+        <div class="arrow arrow-down" ng-click="setDate(selected.clone().subtract(1, 'seconds'))"></div>
       </div>
     </div>
   </div>
