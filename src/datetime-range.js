@@ -31,11 +31,13 @@ angular.module('g1b.datetime-range', []).
           };
 
           // Update selected date
-          scope.setDate = function (date) {
+          scope.setDate = function (date, calendar_update) {
             if ( scope.selected.isSame(date) ) { return; }
             if ( ( scope.selected === scope.start && date < scope.end ) || ( scope.selected === scope.end && date > scope.start ) ) {
               scope.selected.year(date.year()).month(date.month()).date(date.date()).hours(date.hours()).minutes(date.minutes()).seconds(date.seconds());
-              scope.calendar = scope.selected.clone();
+              if ( calendar_update ) {
+                scope.calendar = scope.selected.clone();
+              }
               scope.handler();
             } else {
               scope.warning = ( scope.selected === scope.start ) ? 'end' : 'start';
