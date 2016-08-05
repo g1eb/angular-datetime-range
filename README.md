@@ -31,13 +31,7 @@ angular.module('myApp', [
 3) Use 'datetime-range' directive in a view
 
 ```html
-<datetime-range
-  start="start"
-  end="end"
-  on-change="changed()"
-  on-change-start="changedStart()"
-  on-change-end="changedEnd()">
-</datetime-range>
+<datetime-range start="start" end="end"></datetime-range>
 ```
 
 ### Attributes
