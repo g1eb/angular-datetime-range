@@ -31,7 +31,13 @@ angular.module('myApp', [
 3) Use 'datetime-range' directive in a view
 
 ```html
-<datetime-range start="start" end="end" handler="print(start, end)"></datetime-range>
+<datetime-range
+  start="start"
+  end="end"
+  on-change="changed()"
+  on-change-start="changedStart()"
+  on-change-end="changedEnd()">
+</datetime-range>
 ```
 
 ### Attributes
@@ -39,8 +45,10 @@ angular.module('myApp', [
 |Property        | Usage           | Default  | Required |
 |:------------- |:-------------|:-----:|:-----:|
 | start | Start moment.js datetime object or a datetime string | none | yes |
-| end | End moment.js datetime object or a datetime string | none | no |
-| handler | Handler function is fired on change of start and/or end datetime objects | none | no |
+| end | End moment.js datetime object or a datetime string | none | yes |
+| on-change | Handler function that is fired on change of start and/or end datetime objects | none | no |
+| on-change-start | Handler function that is fired on change of start datetime object | none | no |
+| on-change-end | Handler function that is fired on change of end datetime object | none | no |
 
 ## Dependencies
 
