@@ -40,13 +40,25 @@ angular.module('g1b.datetime-range', []).
               if ( (scope.selected.clone().startOf('week').month() !== scope.calendar.month() && scope.selected.clone().endOf('week').month() !== scope.calendar.month()) || calendar_update ) {
                 scope.calendar = scope.selected.clone();
               }
-              ( scope.selected === scope.start ) ? scope.onChangeStart() : scope.onChangeEnd();
-              scope.onChange();
+              scope.callback();
             } else {
               scope.warning = ( scope.selected === scope.start ) ? 'end' : 'start';
               $timeout(function () {
                 scope.warning = undefined;
               }, 250);
+            }
+          };
+
+          // Callbacks fired on change of start and/or end datetime objects
+          scope.callback = function () {
+            if ( !!scope.onChangeStart && scope.selected === scope.start ) {
+              scope.onChangeStart();
+            }
+            if ( !!scope.onChangeEnd && scope.selected === scope.end ) {
+              scope.onChangeEnd();
+            }
+            if ( !!scope.onChange ) {
+              scope.onChange();
             }
           };
 
