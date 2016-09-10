@@ -21,10 +21,11 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js" charset="utf-8"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js" charset="utf-8"></script>
+  <script src="node_modules/ng-scroll/ng-scroll.js"></script>
   <script src="dist/datetime-range.js"></script>
 
   <script>
-    angular.module('ExampleApp', ['g1b.datetime-range']).
+    angular.module('ExampleApp', ['g1b.datetime-range', 'ngScroll']).
       controller('MainCtrl', function ($scope) {
         $scope.start = moment();
         $scope.end = moment().add(1, 'days').add(1, 'hours');
