@@ -382,3 +382,44 @@
   95% { opacity: 1.0; }
   100% { opacity: 0.0; }
 }
+
+
+/**
+ * Close button
+ */
+.datetime-range .close-button {
+  position: absolute;
+  z-index: 5;
+  bottom: -2.5em;
+  left: -1px;
+  cursor: pointer;
+  outline: none;
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  color: #777;
+  width: 25%;
+  height: auto;
+  font-size: 1.5em;
+  line-height: 2em;
+  box-sizing: border-box;
+  background-color: #efefef;
+  transition: background-color 0.25s ease-out;
+}
+.datetime-range .close-button::before {
+  content: "";
+  position: absolute;
+  right: -0.5em;
+  top: -1px;
+  width: 1em;
+  height: 2em;
+  background: #efefef;
+  border-top: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+  transition: background 0.25s ease-out;
+  transform: skewX(-26deg);
+}
+.datetime-range .close-button:hover,
+.datetime-range .close-button:hover::before {
+  background: #ddd;
+}

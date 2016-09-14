@@ -61,5 +61,8 @@
         <div class="arrow arrow-down" ng-click="setDate(selected.clone().subtract(1, 'seconds'))"></div>
       </div>
     </div>
+    <div class="close-button" ng-if="!!onClose">
+      <div ng-click="close(); onClose()">Close</div>
+    </div>
   </div>
 </div>
