@@ -2,7 +2,7 @@
 
 This directive is designed to provide easy and intuitive input of moment.js datetime objects.
 
-Typically this can be used to represent a start and an end datetime object.
+Typically this can be used to represent a start and an end datetime object.  
 Desgined to be as simple as possible to afford intuitive interactions, including scrolling.
 
 Converted into an angular directive for your convenience :)
