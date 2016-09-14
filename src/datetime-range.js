@@ -10,7 +10,8 @@ angular.module('g1b.datetime-range', []).
       end: '=',
       onChange: '&?',
       onChangeStart: '&?',
-      onChangeEnd: '&?'
+      onChangeEnd: '&?',
+      onClose: '&?',
     },
     replace: true,
     templateUrl: './datetime-range.html',
@@ -70,6 +71,13 @@ angular.module('g1b.datetime-range', []).
           // Convert end datetime to moment.js if its not a moment object yet
           if ( scope.end && !scope.end._isAMomentObject ) {
             scope.end = moment(scope.end);
+          }
+
+          // Close edit popover
+          scope.close = function () {
+            scope.selected = '';
+            scope.calendar_active = false;
+            scope.onClose();
           }
 
           // Bind click events outside directive to close edit popover
