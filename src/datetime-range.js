@@ -13,7 +13,7 @@ angular.module('g1b.datetime-range', []).
       onChangeEnd: '&?'
     },
     replace: true,
-    templateUrl: 'src/datetime-range.html',
+    templateUrl: './datetime-range.html',
     compile: function () {
       return {
         pre: function preLink() {},
