@@ -89,6 +89,16 @@ angular.module('g1b.datetime-range', []).
               });
             }
           });
+
+          $document.on('keyup', function (e) {
+            if ( e.keyCode === 27 && !!scope.selected ) {
+              scope.$apply(function () {
+                scope.selected = '';
+                scope.calendar_active = false;
+                scope.onClose();
+              });
+            }
+          });
         }
       };
     }
