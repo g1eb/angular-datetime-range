@@ -4,6 +4,7 @@
 .datetime-range {
   position: relative;
   width: 100%;
+  min-width: 350px;
   height: auto;
   min-height: 4em;
   margin: 0;
