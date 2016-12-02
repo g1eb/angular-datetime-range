@@ -321,7 +321,7 @@
   content: "";
   position: absolute;
   top: 50%;
-  left: 35%;
+  left: calc(50% - 0.4em);
   border-left: 0.5em solid transparent;
   border-right: 0.5em solid transparent;
   border-bottom: 0.5em solid #ddd;
@@ -338,7 +338,7 @@
   content: "";
   position: absolute;
   top: 0;
-  left: 35%;
+  left: calc(50% - 0.4em);
   border-left: 0.5em solid transparent;
   border-right: 0.5em solid transparent;
   border-top: 0.5em solid #ddd;
