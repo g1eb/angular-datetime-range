@@ -10,12 +10,25 @@ Converted into an angular directive for your convenience :)
 ## Demo
 Click <a href="https://rawgit.com/g1eb/angular-datetime-range/master/" target="_blank">here</a> for a live demo.
 
+
+### Datetime range input (collapsed state)
+[<img src="https://raw.githubusercontent.com/g1eb/angular-datetime-range/master/images/start_datetime.png" alt="Angular directive datetime range input - collapsed" width="300px">](https://rawgit.com/g1eb/angular-datetime-range/master/)
+
+### Datetime range input (expanded state)
+[<img src="https://raw.githubusercontent.com/g1eb/angular-datetime-range/master/images/end_datetime.png" alt="Angular directive datetime range input - expanded" width="300px">](https://rawgit.com/g1eb/angular-datetime-range/master/)
+
 ## Installation
 
 1) Install 'angular-datetime-range' with bower
 
 ```
 bower install angular-datetime-range
+```
+
+Or with npm:
+
+```
+npm install angular-datetime-range
 ```
 
 2) Add 'g1b.datetime-range' module to your app config
