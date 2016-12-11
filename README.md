@@ -17,7 +17,7 @@ Click <a href="https://rawgit.com/g1eb/angular-datetime-range/master/" target="_
 ### Datetime range input (expanded state)
 [<img src="https://raw.githubusercontent.com/g1eb/angular-datetime-range/master/images/end_datetime.png" alt="Angular directive datetime range input - expanded" width="300px">](https://rawgit.com/g1eb/angular-datetime-range/master/)
 
-## Installation
+## Install
 
 1) Install 'angular-datetime-range' with bower
 
