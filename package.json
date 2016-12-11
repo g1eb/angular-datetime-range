@@ -1,23 +1,31 @@
 {
   "name": "angular-datetime-range",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "UI widget for datetime range input, converted to an angular directive for your convenience.",
-  "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "angular": "^1.5.6",
-    "gulp": "^3.9.1",
-    "gulp-angular-embed-templates": "^2.2.0",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-uglify": "^1.5.3",
-    "moment": "^2.13.0"
+  "homepage": "https://github.com/g1eb/angular-datetime-range#readme",
+  "author": "Gleb <git@gleb.nl>",
+  "license": "MIT",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/g1eb/angular-datetime-range.git"
+  },
+  "bugs": {
+    "url": "https://github.com/g1eb/angular-datetime-range/issues"
   },
   "scripts": {
     "build": "gulp build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/g1eb/angular-datetime-range.git"
+  "dependencies": {
+    "angular": "^1.5.6",
+    "moment": "^2.13.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-angular-embed-templates": "^2.2.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-uglify": "^1.5.3"
   },
   "keywords": [
     "angular",
@@ -33,11 +41,5 @@
     "picker",
     "dateinput",
     "timeinput"
-  ],
-  "author": "Gleb <git@gleb.nl>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/g1eb/angular-datetime-range/issues"
-  },
-  "homepage": "https://github.com/g1eb/angular-datetime-range#readme"
+  ]
 }
