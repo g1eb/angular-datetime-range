@@ -64,5 +64,8 @@
     <div class="close-button" ng-if="!!onClose">
       <div ng-click="close()">Close</div>
     </div>
+    <div class="presets" ng-if="!!presets">
+      <div class="preset-button" ng-repeat="preset in presets" ng-click="selectPreset(preset)">{{ preset.name }}</div>
+    </div>
   </div>
 </div>
