@@ -8,6 +8,7 @@ angular.module('g1b.datetime-range', []).
     scope: {
       start: '=',
       end: '=',
+      presets: '=?',
       onChange: '&?',
       onChangeStart: '&?',
       onChangeEnd: '&?',
