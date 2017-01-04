@@ -5,7 +5,7 @@
   "homepage": "https://github.com/g1eb/angular-datetime-range#readme",
   "author": "Gleb <git@gleb.nl>",
   "license": "MIT",
-  "main": "index.html",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/g1eb/angular-datetime-range.git"
