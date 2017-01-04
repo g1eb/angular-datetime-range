@@ -56,6 +56,7 @@ angular.module('myApp', [
 | on-change | Handler function that is fired on change of start and/or end datetime objects | none | no |
 | on-change-start | Handler function that is fired on change of start datetime object | none | no |
 | on-change-end | Handler function that is fired on change of end datetime object | none | no |
+| on-close | Handler function that is fired on close of the edit popover | none | no |
 
 ## Dependencies
 
