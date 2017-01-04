@@ -89,6 +89,7 @@ angular.module('g1b.datetime-range', []).
             }
           });
 
+          // Bind 'esc' keyup event to close edit popover
           $document.on('keyup', function (e) {
             if ( e.keyCode === 27 && !!scope.selected ) {
               scope.$apply(function () {
@@ -102,6 +103,7 @@ angular.module('g1b.datetime-range', []).
   };
 }]);
 
+// Scroll up directive
 angular.module('g1b.datetime-range').
   directive('scrollUp', function () {
   return {
@@ -126,6 +128,7 @@ angular.module('g1b.datetime-range').
   };
 });
 
+// Scroll down directive
 angular.module('g1b.datetime-range').
   directive('scrollDown', function () {
   return {
