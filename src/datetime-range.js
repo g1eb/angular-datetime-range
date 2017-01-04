@@ -51,6 +51,17 @@ angular.module('g1b.datetime-range', []).
             }
           };
 
+          // Set start and end datetime objects to the selected preset
+          scope.selectPreset = function (preset) {
+            if ( !!scope.selected && scope.selected === scope.start ) {
+              scope.selected = preset.start;
+            } else if ( !!scope.selected && scope.selected === scope.end ) {
+              scope.selected = preset.end;
+            }
+            scope.start = preset.start;
+            scope.end = preset.end;
+          };
+
           // Callbacks fired on change of start and/or end datetime objects
           scope.callback = function () {
             if ( !!scope.onChangeStart && scope.selected === scope.start ) {
