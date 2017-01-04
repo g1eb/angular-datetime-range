@@ -17,7 +17,7 @@ Click <a href="https://rawgit.com/g1eb/angular-datetime-range/master/" target="_
 ### Datetime range input (expanded state)
 [<img src="https://raw.githubusercontent.com/g1eb/angular-datetime-range/master/images/end_datetime.png" alt="Angular directive datetime range input - expanded" width="300px">](https://rawgit.com/g1eb/angular-datetime-range/master/)
 
-## Installation
+## Install
 
 1) Install 'angular-datetime-range' with bower
 
@@ -56,6 +56,7 @@ angular.module('myApp', [
 | on-change | Handler function that is fired on change of start and/or end datetime objects | none | no |
 | on-change-start | Handler function that is fired on change of start datetime object | none | no |
 | on-change-end | Handler function that is fired on change of end datetime object | none | no |
+| on-close | Handler function that is fired on close of the edit popover | none | no |
 
 ## Dependencies
 
