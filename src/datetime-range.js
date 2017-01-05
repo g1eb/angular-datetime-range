@@ -91,7 +91,10 @@ angular.module('g1b.datetime-range', []).
           scope.close = function () {
             scope.selected = '';
             scope.calendarActive = false;
-            scope.onClose();
+
+            if ( !!scope.onClose ) {
+              scope.onClose();
+            }
           }
 
           // Bind click events outside directive to close edit popover
