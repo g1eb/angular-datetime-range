@@ -90,7 +90,7 @@ angular.module('g1b.datetime-range', []).
           // Close edit popover
           scope.close = function () {
             scope.selected = '';
-            scope.calendar_active = false;
+            scope.calendarActive = false;
             scope.onClose();
           }
 

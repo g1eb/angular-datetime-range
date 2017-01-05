@@ -26,10 +26,10 @@
   <div class="edit-popover" ng-show="!!selected">
     <div class="calendar-toggle"
       ng-class="{'start': selected === start, 'end': selected === end}"
-      ng-click="calendar_active = !calendar_active"
+      ng-click="calendarActive = !calendarActive"
       ng-bind="selected.format('DD MMMM YYYY')">
     </div>
-    <div class="calendar" ng-show="!!calendar_active">
+    <div class="calendar" ng-show="!!calendarActive">
       <div class="calendar-header">
         <div class="arrow arrow-left" ng-click="calendar.subtract(1, 'months')"></div>
         <span ng-bind="calendar.format('MMMM')"></span>
