@@ -30,7 +30,9 @@
       ng-bind="selected.format('DD MMMM YYYY')">
     </div>
     <div class="calendar" ng-show="!!calendarActive">
-      <div class="calendar-header" scroll-up="calendar.add(1, 'months')" scroll-down="calendar.subtract(1, 'months')">
+      <div class="calendar-header"
+        scroll-up="calendar.add(1, 'months')"
+        scroll-down="calendar.subtract(1, 'months')">
         <div class="arrow arrow-left" ng-click="calendar.subtract(1, 'months')"></div>
         <span ng-bind="calendar.format('MMMM')"></span>
         <div class="arrow arrow-right" ng-click="calendar.add(1, 'months')"></div>
@@ -56,19 +58,25 @@
       </div>
     </div>
     <div class="timer">
-      <div class="timer-hours" scroll-up="setDate(selected.clone().add(1, 'hours'))" scroll-down="setDate(selected.clone().subtract(1, 'hours'))">
+      <div class="timer-hours"
+        scroll-up="setDate(selected.clone().add(1, 'hours'))"
+        scroll-down="setDate(selected.clone().subtract(1, 'hours'))">
         <div class="arrow arrow-up" ng-click="setDate(selected.clone().add(1, 'hours'))"></div>
         <span ng-bind="selected.format('HH')"></span>
         <div class="arrow arrow-down" ng-click="setDate(selected.clone().subtract(1, 'hours'))"></div>
       </div>
       <div class="timer-divider">:</div>
-      <div class="timer-minutes" scroll-up="setDate(selected.clone().add(1, 'minutes'))" scroll-down="setDate(selected.clone().subtract(1, 'minutes'))">
+      <div class="timer-minutes"
+        scroll-up="setDate(selected.clone().add(1, 'minutes'))"
+        scroll-down="setDate(selected.clone().subtract(1, 'minutes'))">
         <div class="arrow arrow-up" ng-click="setDate(selected.clone().add(1, 'minutes'))"></div>
         <span ng-bind="selected.format('mm')"></span>
         <div class="arrow arrow-down" ng-click="setDate(selected.clone().subtract(1, 'minutes'))"></div>
       </div>
       <div class="timer-divider">:</div>
-      <div class="timer-seconds" scroll-up="setDate(selected.clone().add(1, 'seconds'))" scroll-down="setDate(selected.clone().subtract(1, 'seconds'))">
+      <div class="timer-seconds"
+        scroll-up="setDate(selected.clone().add(1, 'seconds'))"
+        scroll-down="setDate(selected.clone().subtract(1, 'seconds'))">
         <div class="arrow arrow-up" ng-click="setDate(selected.clone().add(1, 'seconds'))"></div>
         <span ng-bind="selected.format('ss')"></span>
         <div class="arrow arrow-down" ng-click="setDate(selected.clone().subtract(1, 'seconds'))"></div>
