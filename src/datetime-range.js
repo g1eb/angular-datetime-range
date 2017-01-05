@@ -90,6 +90,7 @@ angular.module('g1b.datetime-range', []).
           // Close edit popover
           scope.close = function () {
             scope.selected = '';
+            scope.presetsActive = false;
             scope.calendarActive = false;
 
             if ( !!scope.onClose ) {
@@ -99,7 +100,7 @@ angular.module('g1b.datetime-range', []).
 
           // Bind click events outside directive to close edit popover
           $document.on('mousedown', function (e) {
-            if ( !!scope.selected && !element[0].contains(e.target) ) {
+            if ( !element[0].contains(e.target) && (!!scope.presetsActive || !!scope.selected) ) {
               scope.$apply(function () {
                 scope.close();
               });
@@ -108,7 +109,7 @@ angular.module('g1b.datetime-range', []).
 
           // Bind 'esc' keyup event to close edit popover
           $document.on('keyup', function (e) {
-            if ( e.keyCode === 27 && !!scope.selected ) {
+            if ( e.keyCode === 27 && (!!scope.presetsActive || !!scope.selected) ) {
               scope.$apply(function () {
                 scope.close();
               });
