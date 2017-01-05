@@ -12,7 +12,9 @@
     <div class="time" ng-bind="end.format('HH : mm : ss')"></div>
   </div>
   <div class="presets" ng-show="!!presets">
-    <div class="dots" ng-click="presetsActive = !presetsActive">
+    <div class="dots"
+      ng-show="!presetsActive"
+      ng-click="presetsActive = !presetsActive">
       <div class="dot" ng-repeat="dot in '.....' track by $index"></div>
     </div>
     <div class="list" ng-class="{'active': !!presetsActive}">
