@@ -31,6 +31,7 @@ angular.module('g1b.datetime-range', []).
             } else {
               scope.selected = date;
               scope.calendar = scope.selected.clone();
+              scope.presetsActive = false;
             }
           };
 
@@ -60,6 +61,7 @@ angular.module('g1b.datetime-range', []).
             }
             scope.start = preset.start;
             scope.end = preset.end;
+            scope.presetsActive = false;
           };
 
           // Callbacks fired on change of start and/or end datetime objects
