@@ -62,14 +62,15 @@ angular.module('g1b.datetime-range', []).
             scope.start = preset.start;
             scope.end = preset.end;
             scope.presetsActive = false;
+            scope.callback(true);
           };
 
           // Callbacks fired on change of start and/or end datetime objects
-          scope.callback = function () {
-            if ( !!scope.onChangeStart && scope.selected === scope.start ) {
+          scope.callback = function (allChanged) {
+            if ( !!scope.onChangeStart && (allChanged || scope.selected === scope.start) ) {
               scope.onChangeStart();
             }
-            if ( !!scope.onChangeEnd && scope.selected === scope.end ) {
+            if ( !!scope.onChangeEnd && (allChanged || scope.selected === scope.end) ) {
               scope.onChangeEnd();
             }
             if ( !!scope.onChange ) {
