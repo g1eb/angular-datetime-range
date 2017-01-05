@@ -143,6 +143,7 @@
   width: 5px;
   height: 5px;
   margin: 0 3px;
+  vertical-align: top;
   background-color: #efefef;
 }
 .datetime-range .presets .dots:hover .dot {
@@ -150,7 +151,6 @@
 }
 .datetime-range .presets .list {
   display: none;
-  margin-top: 10px;
 }
 .datetime-range .presets .list.active {
   display: block;
