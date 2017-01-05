@@ -122,6 +122,63 @@
 
 
 /**
+ * Presets
+ */
+.datetime-range .presets {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 5;
+  top: 4.5em;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  text-align: center;
+}
+.datetime-range .presets .dots {
+  display: inline-block;
+  cursor: pointer;
+}
+.datetime-range .presets .dots .dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin: 0 3px;
+  background-color: #efefef;
+}
+.datetime-range .presets .dots:hover .dot {
+  background-color: #ddd;
+}
+.datetime-range .presets .list {
+  display: none;
+  margin-top: 10px;
+}
+.datetime-range .presets .list.active {
+  display: block;
+}
+.datetime-range .presets .list .preset-button {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  color: #777;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  padding: 0 15px;
+  font-size: 1.5em;
+  line-height: 2em;
+  text-align: center;
+  outline: none;
+  border: 1px solid #aaa;
+  background-color: #efefef;
+  transition: background-color 0.25s ease-out;
+}
+.datetime-range .presets .list .preset-button:hover {
+  background: #ddd;
+}
+
+
+/**
  * Edit datetime popover
  */
 .datetime-range .edit-popover {
@@ -422,52 +479,5 @@
 }
 .datetime-range .close-button:hover,
 .datetime-range .close-button:hover::before {
-  background: #ddd;
-}
-
-
-/**
- * Presets
- */
-.datetime-range .presets {
-  position: absolute;
-  z-index: 5;
-  right: -1px;
-  margin-top: 10px;
-}
-.datetime-range .presets .preset-button {
-  position: relative;
-  display: block;
-  cursor: pointer;
-  outline: none;
-  border-top: 1px solid #aaa;
-  border-right: 1px solid #aaa;
-  border-bottom: 1px solid #aaa;
-  color: #777;
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-  padding: 0 15px;
-  font-size: 1.5em;
-  line-height: 2em;
-  box-sizing: border-box;
-  background-color: #efefef;
-  transition: background-color 0.25s ease-out;
-}
-.datetime-range .presets .preset-button::before {
-  content: "";
-  position: absolute;
-  left: -0.5em;
-  top: -1px;
-  width: 1em;
-  height: 2em;
-  background: #efefef;
-  border-top: 1px solid #aaa;
-  border-left: 1px solid #aaa;
-  transition: background 0.25s ease-out;
-  transform: skewX(26deg);
-}
-.datetime-range .presets .preset-button:hover,
-.datetime-range .presets .preset-button:hover::before {
   background: #ddd;
 }
