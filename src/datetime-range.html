@@ -30,7 +30,7 @@
       ng-bind="selected.format('DD MMMM YYYY')">
     </div>
     <div class="calendar" ng-show="!!calendarActive">
-      <div class="calendar-header">
+      <div class="calendar-header" scroll-up="calendar.add(1, 'months')" scroll-down="calendar.subtract(1, 'months')">
         <div class="arrow arrow-left" ng-click="calendar.subtract(1, 'months')"></div>
         <span ng-bind="calendar.format('MMMM')"></span>
         <div class="arrow arrow-right" ng-click="calendar.add(1, 'months')"></div>
