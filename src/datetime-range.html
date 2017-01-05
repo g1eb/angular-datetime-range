@@ -13,7 +13,7 @@
   </div>
   <div class="presets" ng-show="!!presets">
     <div class="dots" ng-click="presetsActive = !presetsActive">
-      <div class="dot" ng-repeat="preset in presets"></div>
+      <div class="dot" ng-repeat="dot in '.....' track by $index"></div>
     </div>
     <div class="list" ng-class="{'active': !!presetsActive}">
       <div class="preset-button"
