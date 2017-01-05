@@ -11,6 +11,14 @@
     <div class="date">{{ end.format('DD MMMM YYYY') }}</div>
     <div class="time">{{ end.format('HH : mm : ss') }}</div>
   </div>
+  <div class="presets" ng-show="!!presets">
+    <div class="dots" ng-click="presetsActive = !presetsActive">
+      <div class="dot" ng-repeat="preset in presets"></div>
+    </div>
+    <div class="list" ng-class="{'active': !!presetsActive}">
+      <div class="preset-button" ng-repeat="preset in presets" ng-click="selectPreset(preset)">{{ preset.name }}</div>
+    </div>
+  </div>
   <div class="edit-popover" ng-show="!!selected">
     <div class="calendar-toggle"
       ng-class="{'start': selected === start, 'end': selected === end}"
@@ -63,9 +71,6 @@
     </div>
     <div class="close-button" ng-if="!!onClose">
       <div ng-click="close()">Close</div>
-    </div>
-    <div class="presets" ng-if="!!presets">
-      <div class="preset-button" ng-repeat="preset in presets" ng-click="selectPreset(preset)">{{ preset.name }}</div>
     </div>
   </div>
 </div>
