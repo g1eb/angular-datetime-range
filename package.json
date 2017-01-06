@@ -1,6 +1,6 @@
 {
   "name": "angular-datetime-range",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "UI widget for datetime range input, converted to an angular directive for your convenience.",
   "homepage": "https://github.com/g1eb/angular-datetime-range#readme",
   "author": "Gleb <git@gleb.nl>",
