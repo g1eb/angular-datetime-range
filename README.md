@@ -66,17 +66,17 @@ Consider the following example with ranges of current week, month and year.
 ```
 $scope.presets = [
   {
-    'name': 'Week',
-    'start': moment().startOf('week'),
-    'end': moment().endOf('week'),
+    'name': 'This Week',
+    'start': moment().startOf('week').startOf('day'),
+    'end': moment().endOf('week').endOf('day'),
   }, {
-    'name': 'Month',
-    'start': moment().startOf('month'),
-    'end': moment().endOf('month'),
+    'name': 'This Month',
+    'start': moment().startOf('month').startOf('day'),
+    'end': moment().endOf('month').endOf('day'),
   }, {
-    'name': 'Year',
-    'start': moment().startOf('year'),
-    'end': moment().endOf('year'),
+    'name': 'This Year',
+    'start': moment().startOf('year').startOf('day'),
+    'end': moment().endOf('year').endOf('day'),
   }
 ];
 ```
