@@ -24,6 +24,16 @@ angular.module('g1b.datetime-range', []).
           // Get current date
           scope.current = moment();
 
+          // Convert start datetime to moment.js if its not a moment object yet
+          if ( scope.start && !scope.start._isAMomentObject ) {
+            scope.start = moment(scope.start);
+          }
+
+          // Convert end datetime to moment.js if its not a moment object yet
+          if ( scope.end && !scope.end._isAMomentObject ) {
+            scope.end = moment(scope.end);
+          }
+
           // Set selected date
           scope.selectDate = function (date) {
             if ( scope.selected === date ) {
@@ -80,16 +90,6 @@ angular.module('g1b.datetime-range', []).
               scope.onChange();
             }
           };
-
-          // Convert start datetime to moment.js if its not a moment object yet
-          if ( scope.start && !scope.start._isAMomentObject ) {
-            scope.start = moment(scope.start);
-          }
-
-          // Convert end datetime to moment.js if its not a moment object yet
-          if ( scope.end && !scope.end._isAMomentObject ) {
-            scope.end = moment(scope.end);
-          }
 
           // Close edit popover
           scope.close = function () {
