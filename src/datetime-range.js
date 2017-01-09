@@ -24,6 +24,16 @@ angular.module('g1b.datetime-range', []).
           // Get current date
           scope.current = moment();
 
+          // Convert start datetime to moment.js if its not a moment object yet
+          if ( scope.start && !scope.start._isAMomentObject ) {
+            scope.start = moment(scope.start);
+          }
+
+          // Convert end datetime to moment.js if its not a moment object yet
+          if ( scope.end && !scope.end._isAMomentObject ) {
+            scope.end = moment(scope.end);
+          }
+
           // Set selected date
           scope.selectDate = function (date) {
             if ( scope.selected === date ) {
@@ -43,7 +53,13 @@ angular.module('g1b.datetime-range', []).
               if ( (scope.selected.clone().startOf('week').month() !== scope.calendar.month() && scope.selected.clone().endOf('week').month() !== scope.calendar.month()) || calendar_update ) {
                 scope.calendar = scope.selected.clone();
               }
-              scope.callback();
+              if ( scope.selected === scope.start ) {
+                scope.callbackStart();
+              }
+              if ( scope.selected === scope.end ) {
+                scope.callbackEnd();
+              }
+              scope.callbackAll();
             } else {
               scope.warning = ( scope.selected === scope.start ) ? 'end' : 'start';
               $timeout(function () {
@@ -54,42 +70,54 @@ angular.module('g1b.datetime-range', []).
 
           // Set start and end datetime objects to the selected preset
           scope.selectPreset = function (preset) {
-            if ( !!scope.selected && scope.selected === scope.start ) {
-              scope.selected = preset.start;
-            } else if ( !!scope.selected && scope.selected === scope.end ) {
-              scope.selected = preset.end;
-            }
-            scope.start = preset.start;
-            scope.end = preset.end;
-            scope.presetsActive = false;
+            // Hide presets menu on select
+            scope.close();
 
-            $timeout(function () {
-              scope.callback(true);
-            });
+            // Don't do anything if nothing is changed
+            if ( scope.start.isSame(preset.start) && scope.end.isSame(preset.end) ) { return; }
+
+            // Update start datetime object if changed
+            if ( !scope.start.isSame(preset.start) ) {
+              scope.start = preset.start.clone();
+              scope.callbackStart();
+            }
+
+            // Update end datetime object if changed
+            if ( !scope.end.isSame(preset.end) ) {
+              scope.end = preset.end.clone();
+              scope.callbackEnd();
+            }
+
+            // Something has definitely changed, fire ambiguous callback
+            scope.callbackAll();
+          };
+
+          // Callbacks fired on change of start datetime object
+          scope.callbackStart = function () {
+            if ( !!scope.onChangeStart ) {
+              $timeout(function () {
+                scope.onChangeStart();
+              });
+            }
+          };
+
+          // Callbacks fired on change of end datetime object
+          scope.callbackEnd = function () {
+            if ( !!scope.onChangeEnd ) {
+              $timeout(function () {
+                scope.onChangeEnd();
+              });
+            }
           };
 
           // Callbacks fired on change of start and/or end datetime objects
-          scope.callback = function (allChanged) {
-            if ( !!scope.onChangeStart && (allChanged || scope.selected === scope.start) ) {
-              scope.onChangeStart();
-            }
-            if ( !!scope.onChangeEnd && (allChanged || scope.selected === scope.end) ) {
-              scope.onChangeEnd();
-            }
+          scope.callbackAll = function () {
             if ( !!scope.onChange ) {
-              scope.onChange();
+              $timeout(function () {
+                scope.onChange();
+              });
             }
           };
-
-          // Convert start datetime to moment.js if its not a moment object yet
-          if ( scope.start && !scope.start._isAMomentObject ) {
-            scope.start = moment(scope.start);
-          }
-
-          // Convert end datetime to moment.js if its not a moment object yet
-          if ( scope.end && !scope.end._isAMomentObject ) {
-            scope.end = moment(scope.end);
-          }
 
           // Close edit popover
           scope.close = function () {
