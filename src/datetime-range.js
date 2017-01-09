@@ -53,7 +53,13 @@ angular.module('g1b.datetime-range', []).
               if ( (scope.selected.clone().startOf('week').month() !== scope.calendar.month() && scope.selected.clone().endOf('week').month() !== scope.calendar.month()) || calendar_update ) {
                 scope.calendar = scope.selected.clone();
               }
-              scope.callback();
+              if ( scope.selected === scope.start ) {
+                scope.callbackStart();
+              }
+              if ( scope.selected === scope.end ) {
+                scope.callbackEnd();
+              }
+              scope.callbackAll();
             } else {
               scope.warning = ( scope.selected === scope.start ) ? 'end' : 'start';
               $timeout(function () {
