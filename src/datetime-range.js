@@ -70,30 +70,52 @@ angular.module('g1b.datetime-range', []).
 
           // Set start and end datetime objects to the selected preset
           scope.selectPreset = function (preset) {
-            if ( !!scope.selected && scope.selected === scope.start ) {
-              scope.selected = preset.start;
-            } else if ( !!scope.selected && scope.selected === scope.end ) {
-              scope.selected = preset.end;
-            }
-            scope.start = preset.start;
-            scope.end = preset.end;
+            // Hide presets menu on select
             scope.presetsActive = false;
 
-            $timeout(function () {
-              scope.callback(true);
-            });
+            // Don't do anything if nothing is changed
+            if ( scope.start.isSame(preset.start) && scope.end.isSame(preset.end) ) { return; }
+
+            // Update start datetime object if changed
+            if ( !scope.start.isSame(preset.start) ) {
+              scope.start = preset.start.clone();
+              scope.callbackStart();
+            }
+
+            // Update end datetime object if changed
+            if ( !scope.end.isSame(preset.end) ) {
+              scope.end = preset.end.clone();
+              scope.callbackEnd();
+            }
+
+            // Something has definitely changed, fire ambiguous callback
+            scope.callbackAll();
+          };
+
+          // Callbacks fired on change of start datetime object
+          scope.callbackStart = function () {
+            if ( !!scope.onChangeStart ) {
+              $timeout(function () {
+                scope.onChangeStart();
+              });
+            }
+          };
+
+          // Callbacks fired on change of end datetime object
+          scope.callbackEnd = function () {
+            if ( !!scope.onChangeEnd ) {
+              $timeout(function () {
+                scope.onChangeEnd();
+              });
+            }
           };
 
           // Callbacks fired on change of start and/or end datetime objects
-          scope.callback = function (allChanged) {
-            if ( !!scope.onChangeStart && (allChanged || scope.selected === scope.start) ) {
-              scope.onChangeStart();
-            }
-            if ( !!scope.onChangeEnd && (allChanged || scope.selected === scope.end) ) {
-              scope.onChangeEnd();
-            }
+          scope.callbackAll = function () {
             if ( !!scope.onChange ) {
-              scope.onChange();
+              $timeout(function () {
+                scope.onChange();
+              });
             }
           };
 
