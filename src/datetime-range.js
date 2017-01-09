@@ -71,7 +71,7 @@ angular.module('g1b.datetime-range', []).
           // Set start and end datetime objects to the selected preset
           scope.selectPreset = function (preset) {
             // Hide presets menu on select
-            scope.presetsActive = false;
+            scope.close();
 
             // Don't do anything if nothing is changed
             if ( scope.start.isSame(preset.start) && scope.end.isSame(preset.end) ) { return; }
