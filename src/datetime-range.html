@@ -46,7 +46,7 @@
             ng-bind="calendar.clone().startOf('week').add($index, 'days').format('ddd')">
           </span>
         </div>
-        <div class="week" ng-repeat="week in 'months' | limitTo: ((calendar.clone().endOf('month').endOf('week').diff(calendar.clone().startOf('month').startOf('week'), 'days') / 7) + 1) track by $index">
+        <div class="week" ng-repeat="week in 'months' | limitTo: getNumWeeks() track by $index">
           <span class="date" ng-repeat="date in 'weeeeek' track by $index"
             ng-class="{
               'current': calendar.clone().startOf('month').add($parent.$index, 'weeks').weekday($index).startOf('day').isSame(current.clone().startOf('day')),

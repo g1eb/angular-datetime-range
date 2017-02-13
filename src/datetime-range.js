@@ -34,6 +34,12 @@ angular.module('g1b.datetime-range', []).
             scope.end = moment(scope.end);
           }
 
+          // Get number of weeks in month
+          scope.getNumWeeks = function () {
+            if ( !scope.calendar ) { return; }
+            return (scope.calendar.clone().endOf('month').endOf('week').diff(scope.calendar.clone().startOf('month').startOf('week'), 'days') / 7) + 1;
+          }
+
           // Set selected date
           scope.selectDate = function (date) {
             if ( scope.selected === date ) {
