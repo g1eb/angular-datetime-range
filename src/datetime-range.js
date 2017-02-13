@@ -37,7 +37,7 @@ angular.module('g1b.datetime-range', []).
           // Get number of weeks in month
           scope.getNumWeeks = function () {
             if ( !scope.calendar ) { return; }
-            return (scope.calendar.clone().endOf('month').endOf('week').diff(scope.calendar.clone().startOf('month').startOf('week'), 'days') / 7) + 1;
+            return Math.floor(scope.calendar.clone().endOf('month').endOf('week').diff(scope.calendar.clone().startOf('month').startOf('week'), 'days') / 7) + 1;
           }
 
           // Set selected date
