@@ -37,7 +37,15 @@ angular.module('g1b.datetime-range', []).
           // Get number of weeks in month
           scope.getNumWeeks = function () {
             if ( !scope.calendar ) { return; }
-            return Math.floor(scope.calendar.clone().endOf('month').endOf('week').diff(scope.calendar.clone().startOf('month').startOf('week'), 'days') / 7) + 1;
+
+            var firstDayOfWeek = scope.calendar.clone().startOf('week').weekday();
+
+            var firstOfMonth = scope.calendar.clone().startOf('month');
+            var lastOfMonth = scope.calendar.clone().endOf('month');
+
+            var firstWeekDay = (firstOfMonth.weekday() - firstDayOfWeek + 7) % 7;
+
+            return Math.ceil((firstWeekDay + scope.calendar.daysInMonth()) / 7);
           }
 
           // Set selected date

@@ -3,7 +3,7 @@
   "version": "0.2.12",
   "description": "UI widget for datetime range input, converted to an angular directive for your convenience.",
   "homepage": "https://github.com/g1eb/angular-datetime-range#readme",
-  "author": "Gleb <git@gleb.nl>",
+  "author": "g1eb <mail@g1eb.com> (https://g1eb.com)",
   "license": "MIT",
   "main": "index.js",
   "repository": {
