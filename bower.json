@@ -8,8 +8,8 @@
   ],
   "license": "MIT",
   "main": [
-    "dist/datetime-range.js",
-    "dist/datetime-range.css"
+    "dist/datetime-range.min.js",
+    "dist/datetime-range.min.css"
   ],
   "dependencies": {
     "angular": "^1.5.6",
