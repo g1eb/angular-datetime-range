@@ -9,6 +9,8 @@ angular.module('g1b.datetime-range', []).
       start: '=',
       end: '=',
       presets: '=?',
+      minDate:'=?',
+      maxDate:'=?',
       onChange: '&?',
       onChangeStart: '&?',
       onChangeEnd: '&?',
