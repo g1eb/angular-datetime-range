@@ -53,6 +53,8 @@ angular.module('myApp', [
 | start | Start moment.js datetime object or a datetime string | none | yes |
 | end | End moment.js datetime object or a datetime string | none | yes |
 | presets | Array of preset ranges, click <a href="https://github.com/g1eb/angular-datetime-range#presets" target="_blank">here</a> for more info | none | no |
+| min-date | moment.js datetime object min datetime | none | no |
+| max-date | moment.js datetime object max datetime | none | no |
 | on-change | Handler function that is fired on change of start and/or end datetime objects | none | no |
 | on-change-start | Handler function that is fired on change of start datetime object | none | no |
 | on-change-end | Handler function that is fired on change of end datetime object | none | no |
