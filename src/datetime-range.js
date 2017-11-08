@@ -61,9 +61,14 @@ angular.module('g1b.datetime-range', []).
             }
           };
 
+          // Check if date is within bounds of min and max allowed date
+          scope.isWithinBounds = function (date) {
+            return  ( !scope.minDate || date > scope.minDate ) && ( !scope.maxDate || date < scope.maxDate );
+          };
+
           // Update selected date
           scope.setDate = function (date, calendar_update) {
-            if ( scope.selected.isSame(date) ) { return; }
+            if ( scope.selected.isSame(date) || !scope.isWithinBounds(date) ) { return; }
             if ( ( scope.selected === scope.start && date < scope.end ) || ( scope.selected === scope.end && date > scope.start ) ) {
               scope.selected.year(date.year()).month(date.month()).date(date.date()).hours(date.hours()).minutes(date.minutes()).seconds(date.seconds());
               if ( (scope.selected.clone().startOf('week').month() !== scope.calendar.month() && scope.selected.clone().endOf('week').month() !== scope.calendar.month()) || calendar_update ) {
