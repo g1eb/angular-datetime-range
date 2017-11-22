@@ -11,6 +11,7 @@ angular.module('g1b.datetime-range', []).
       presets: '=?',
       minDate:'=?',
       maxDate:'=?',
+      utcOffset: '=?',
       onChange: '&?',
       onChangeStart: '&?',
       onChangeEnd: '&?',
@@ -25,15 +26,24 @@ angular.module('g1b.datetime-range', []).
 
           // Get current date
           scope.current = moment();
+          if ( scope.utcOffset ) {
+            scope.current.utcOffset(scope.utcOffset);
+          }
 
           // Convert start datetime to moment.js if its not a moment object yet
           if ( scope.start && !scope.start._isAMomentObject ) {
             scope.start = moment(scope.start);
+            if ( scope.utcOffset ) {
+              scope.start.utcOffset(scope.utcOffset);
+            }
           }
 
           // Convert end datetime to moment.js if its not a moment object yet
           if ( scope.end && !scope.end._isAMomentObject ) {
             scope.end = moment(scope.end);
+            if ( scope.utcOffset ) {
+              scope.end.utcOffset(scope.utcOffset);
+            }
           }
 
           // Get number of weeks in month
