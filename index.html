@@ -21,6 +21,7 @@
     start="start"
     end="end"
     presets="presets"
+    utc-offset="offset"
     on-change="changed()"
     on-change-start="changedStart()"
     on-change-end="changedEnd()"
@@ -52,6 +53,9 @@
                 'end': moment().endOf('year').endOf('day'),
               }
         ];
+
+        // utc offset in minutes
+        $scope.offset = 120;
 
         $scope.changed = function () {
           console.log('changed start or end datetime objects');
