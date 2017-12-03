@@ -87,3 +87,4 @@ $scope.presets = [
 
 * [AngularJS](https://angularjs.org/)
 * [moment.js](http://momentjs.com/)
+* [angular-scroll-events](https://github.com/g1eb/angular-scroll-events)
