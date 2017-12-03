@@ -16,6 +16,9 @@
   "scripts": {
     "build": "gulp build"
   },
+  "dependencies": {
+    "angular-scroll-events": "^0.0.2"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-angular-embed-templates": "^2.2.0",
