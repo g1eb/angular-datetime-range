@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('g1b.datetime-range', []).
+angular.module('g1b.datetime-range', ['g1b.scroll-events']).
   directive('datetimeRange', ['$document', '$timeout', function ($document, $timeout) {
 
   return {
