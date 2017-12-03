@@ -40,19 +40,19 @@
         $scope.end = moment().add(1, 'days').add(1, 'hours');
 
         $scope.presets = [
-            {
-                'name': 'This Week',
-                'start': moment().startOf('week').startOf('day'),
-                'end': moment().endOf('week').endOf('day'),
-              }, {
-                'name': 'This Month',
-                'start': moment().startOf('month').startOf('day'),
-                'end': moment().endOf('month').endOf('day'),
-              }, {
-                'name': 'This Year',
-                'start': moment().startOf('year').startOf('day'),
-                'end': moment().endOf('year').endOf('day'),
-              }
+          {
+            'name': 'This Week',
+            'start': moment().startOf('week').startOf('day'),
+            'end': moment().endOf('week').endOf('day'),
+          }, {
+            'name': 'This Month',
+            'start': moment().startOf('month').startOf('day'),
+            'end': moment().endOf('month').endOf('day'),
+          }, {
+            'name': 'This Year',
+            'start': moment().startOf('year').startOf('day'),
+            'end': moment().endOf('year').endOf('day'),
+          }
         ];
 
         $scope.changed = function () {
