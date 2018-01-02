@@ -83,6 +83,10 @@ $scope.presets = [
 ];
 ```
 
+## Other input directives
+
+If you are looking for other datetime input elements, check out [angular-datetime-inputs](https://github.com/g1eb/angular-datetime-inputs)
+
 ## Dependencies
 
 * [AngularJS](https://angularjs.org/)
