@@ -15,6 +15,7 @@ angular.module('g1b.datetime-range').
       onChangeStart: '&?',
       onChangeEnd: '&?',
       onClose: '&?',
+      closeText: '@',
     },
     replace: true,
     templateUrl: './date-range.html',

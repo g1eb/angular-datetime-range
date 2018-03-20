@@ -15,6 +15,7 @@ angular.module('g1b.datetime-range', ['g1b.scroll-events']).
       onChangeStart: '&?',
       onChangeEnd: '&?',
       onClose: '&?',
+      closeText: '@',
     },
     replace: true,
     templateUrl: './datetime-range.html',
