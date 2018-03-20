@@ -17,6 +17,18 @@
 </head>
 <body ng-controller="MainCtrl">
 
+  <h1>Date</h1>
+  <date-range
+    start="start"
+    end="end"
+    presets="presets"
+    on-change="changed()"
+    on-change-start="changedStart()"
+    on-change-end="changedEnd()"
+    on-close="closed()">
+  </date-range>
+
+  <h1>Datetime</h1>
   <datetime-range
     start="start"
     end="end"
