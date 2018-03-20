@@ -10,11 +10,17 @@ Converted into an angular directive for your convenience :)
 ## Demo
 Click <a href="https://rawgit.com/g1eb/angular-datetime-range/master/" target="_blank">here</a> for a live demo.
 
-### Datetime range input (collapsed state)
-[<img src="https://raw.githubusercontent.com/g1eb/angular-datetime-range/master/images/start_datetime.png" alt="Angular directive datetime range input - collapsed" width="300px">](https://rawgit.com/g1eb/angular-datetime-range/master/)
+### Date range
+[<img src="https://raw.githubusercontent.com/g1eb/angular-datetime-range/master/images/date_range.png" alt="Angular directive datetime range input - date range" width="300px">](https://rawgit.com/g1eb/angular-datetime-range/master/)
 
-### Datetime range input (expanded state)
-[<img src="https://raw.githubusercontent.com/g1eb/angular-datetime-range/master/images/end_datetime.png" alt="Angular directive datetime range input - expanded" width="300px">](https://rawgit.com/g1eb/angular-datetime-range/master/)
+### Time range
+[<img src="https://raw.githubusercontent.com/g1eb/angular-datetime-range/master/images/time_range.png" alt="Angular directive datetime range input - time range" width="300px">](https://rawgit.com/g1eb/angular-datetime-range/master/)
+
+### Datetime range (collapsed state)
+[<img src="https://raw.githubusercontent.com/g1eb/angular-datetime-range/master/images/datetime_range_collapsed.png" alt="Angular directive datetime range input - datetime range (collapsed)" width="300px">](https://rawgit.com/g1eb/angular-datetime-range/master/)
+
+### Datetime range (expanded state)
+[<img src="https://raw.githubusercontent.com/g1eb/angular-datetime-range/master/images/datetime_range_expanded.png" alt="Angular directive datetime range input - datetime range (expanded)" width="300px">](https://rawgit.com/g1eb/angular-datetime-range/master/)
 
 ## Install
 
