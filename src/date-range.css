@@ -185,19 +185,14 @@
   border: 1px solid #aaa;
   box-sizing: border-box;
 }
-
-
-/**
- * Calendar
- */
-.datetime-range.date .header {
+.datetime-range.date .edit-popover .header {
   width: 100%;
   color: #777;
   font-size: 1.5em;
   line-height: 2em;
   transition: background-color 0.25s ease-out;
 }
-.datetime-range.date .header::before {
+.datetime-range.date .edit-popover .header::before {
   content: "";
   display: block;
   position: absolute;
@@ -217,12 +212,17 @@
   -webkit-transform: rotate(-45deg);
   transition: background-color 0.25s ease-out;
 }
-.datetime-range.date .header.start::before {
+.datetime-range.date .edit-popover .header.start::before {
   left: 20%;
 }
-.datetime-range.date .header.end::before {
+.datetime-range.date .edit-popover .header.end::before {
   left: 74%;
 }
+
+
+/**
+ * Calendar
+ */
 .datetime-range.date .calendar .calendar-header {
   cursor: default;
   background-color: #fff;
