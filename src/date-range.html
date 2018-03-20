@@ -2,12 +2,12 @@
   <div class="start-datetime"
     ng-click="selectDate(start)"
     ng-class="{'active': selected === start, 'warning': warning === 'start' }">
-    <div class="date" ng-bind="start.format('DD MMMM YYYY')"></div>
+    <div class="date" ng-bind="start.format('DD MMM YYYY')"></div>
   </div>
   <div class="end-datetime"
     ng-click="selectDate(end)"
     ng-class="{'active': selected === end, 'warning': warning === 'end'}">
-    <div class="date" ng-bind="end.format('DD MMMM YYYY')"></div>
+    <div class="date" ng-bind="end.format('DD MMM YYYY')"></div>
   </div>
   <div class="presets" ng-show="!!presets">
     <div class="dots"
