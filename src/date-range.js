@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('g1b.datetime-range', ['g1b.scroll-events']).
-  directive('datetimeRange', ['$document', '$timeout', function ($document, $timeout) {
+angular.module('g1b.datetime-range').
+  directive('dateRange', ['$document', '$timeout', function ($document, $timeout) {
 
   return {
     restrict: 'E',
@@ -11,7 +11,6 @@ angular.module('g1b.datetime-range', ['g1b.scroll-events']).
       presets: '=?',
       minDate:'=?',
       maxDate:'=?',
-      utcOffset: '=?',
       onChange: '&?',
       onChangeStart: '&?',
       onChangeEnd: '&?',
@@ -19,7 +18,7 @@ angular.module('g1b.datetime-range', ['g1b.scroll-events']).
       closeText: '@',
     },
     replace: true,
-    templateUrl: './datetime-range.html',
+    templateUrl: './date-range.html',
     compile: function () {
       return {
         pre: function preLink() {},
@@ -36,13 +35,6 @@ angular.module('g1b.datetime-range', ['g1b.scroll-events']).
           // Convert end datetime to moment.js if its not a moment object yet
           if ( scope.end && !scope.end._isAMomentObject ) {
             scope.end = moment(scope.end);
-          }
-
-          // Set utc offset
-          if ( scope.utcOffset !== undefined ) {
-            scope.current.utcOffset(scope.utcOffset);
-            scope.start.utcOffset(scope.utcOffset);
-            scope.end.utcOffset(scope.utcOffset);
           }
 
           // Get number of weeks in month
@@ -153,7 +145,6 @@ angular.module('g1b.datetime-range', ['g1b.scroll-events']).
           scope.close = function () {
             scope.selected = '';
             scope.presetsActive = false;
-            scope.calendarActive = false;
 
             if ( !!scope.onClose ) {
               scope.onClose();

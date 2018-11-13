@@ -1,0 +1,372 @@
+/**
+ * Datetime range styles
+ */
+.datetime-range.date {
+  position: relative;
+  width: 100%;
+  min-width: 350px;
+  height: auto;
+  min-height: 4em;
+  margin: 0;
+  padding: 0;
+  color: #444;
+  font-size: 14px;
+  font-family: sans-serif;
+  text-decoration: none;
+  text-align: center;
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+
+/**
+ * Start and end datetime objects
+ */
+.datetime-range.date .start-datetime,
+.datetime-range.date .end-datetime {
+  cursor: pointer;
+  position: relative;
+  width: 47%;
+  height: 4em;
+  background-color: #efefef;
+  transition: background-color 0.25s ease-out;
+}
+.datetime-range.date .start-datetime {
+  position: absolute;
+  left: 0;
+}
+.datetime-range.date .end-datetime {
+  position: absolute;
+  left: 53%;
+}
+.datetime-range.date .start-datetime .date,
+.datetime-range.date .end-datetime .date {
+  color: #777;
+  font-size: 2em;
+  line-height: 2em;
+  display: block;
+  overflow: hidden;
+}
+.datetime-range.date .start-datetime.active,
+.datetime-range.date .start-datetime:hover,
+.datetime-range.date .end-datetime.active,
+.datetime-range.date .end-datetime:hover {
+  background-color: #ddd;
+}
+.datetime-range.date .start-datetime::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border-top: 2em solid transparent;
+  border-bottom: 2em solid transparent;
+  border-left: 1em solid #efefef;
+  transition: border-left 0.25s ease-out;
+  right: -1em;
+}
+.datetime-range.date .start-datetime.active::after,
+.datetime-range.date .start-datetime:hover::after {
+  border-left-color: #ddd;
+}
+.datetime-range.date .end-datetime::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  border-width: 2em 0 2em 1em;
+  border-style: solid;
+  border-color: #efefef #efefef #efefef transparent;
+  transition: border-color 0.25s ease-out;
+  left: -1em;
+}
+.datetime-range.date .end-datetime.active::before,
+.datetime-range.date .end-datetime:hover::before {
+  border-color: #ddd #ddd #ddd transparent;
+}
+.datetime-range.date .start-datetime.warning,
+.datetime-range.date .end-datetime.warning {
+  background-color: rgba(255, 54, 46, 0.75);
+}
+.datetime-range.date .start-datetime.warning.active,
+.datetime-range.date .start-datetime.warning:hover,
+.datetime-range.date .end-datetime.warning.active,
+.datetime-range.date .end-datetime.warning:hover {
+  background-color: rgba(255, 54, 46, 0.75);
+}
+.datetime-range.date .start-datetime.warning::after {
+  border-left-color: rgba(255, 54, 46, 0.75);
+}
+.datetime-range.date .start-datetime.warning.active::after,
+.datetime-range.date .start-datetime.warning:hover::after {
+  border-left-color: rgba(255, 54, 46, 0.75);
+}
+.datetime-range.date .end-datetime.warning::before {
+  border-color: rgba(255, 54, 46, 0.75) rgba(255, 54, 46, 0.75) rgba(255, 54, 46, 0.75) transparent;
+}
+.datetime-range.date .end-datetime.warning.active::before,
+.datetime-range.date .end-datetime.warning:hover::before {
+  border-color: rgba(255, 54, 46, 0.75) rgba(255, 54, 46, 0.75) rgba(255, 54, 46, 0.75) transparent;
+}
+
+
+/**
+ * Presets
+ */
+.datetime-range.date .presets {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 5;
+  top: 4.5em;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  text-align: center;
+}
+.datetime-range.date .presets .dots {
+  display: inline-block;
+  cursor: pointer;
+}
+.datetime-range.date .presets .dots .dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin: 0 3px;
+  vertical-align: top;
+  background-color: #efefef;
+}
+.datetime-range.date .presets .dots:hover .dot {
+  background-color: #ddd;
+}
+.datetime-range.date .presets .list {
+  display: none;
+}
+.datetime-range.date .presets .list.active {
+  display: block;
+}
+.datetime-range.date .presets .list .preset-button {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  color: #777;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  padding: 0 15px;
+  font-size: 1.5em;
+  line-height: 2em;
+  text-align: center;
+  outline: none;
+  border: 1px solid #aaa;
+  background-color: #efefef;
+  transition: background-color 0.25s ease-out;
+}
+.datetime-range.date .presets .list .preset-button:hover {
+  background: #ddd;
+}
+
+
+/**
+ * Edit datetime popover
+ */
+.datetime-range.date .edit-popover {
+  position: absolute;
+  z-index: 5;
+  top: 4.5em;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  background-color: #efefef;
+  border-radius: 0;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+}
+.datetime-range.date .edit-popover .header {
+  width: 100%;
+  color: #777;
+  font-size: 1.5em;
+  line-height: 2em;
+  transition: background-color 0.25s ease-out;
+}
+.datetime-range.date .edit-popover .header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #efefef;
+  width: 1em;
+  height: 1em;
+  top: -0.55em;
+  left: 45%;
+  z-index: 2;
+  border-color: #aaa;
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+  transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transition: background-color 0.25s ease-out;
+}
+.datetime-range.date .edit-popover .header.start::before {
+  left: 20%;
+}
+.datetime-range.date .edit-popover .header.end::before {
+  left: 74%;
+}
+
+
+/**
+ * Calendar
+ */
+.datetime-range.date .calendar .calendar-header {
+  cursor: default;
+  background-color: #fff;
+  position: relative;
+  width: 100%;
+  font-size: 1.5em;
+  line-height: 2em;
+}
+.datetime-range.date .calendar .calendar-header .arrow {
+  display: inline-block;
+  color: #ddd;
+  cursor: pointer;
+  line-height: 1.5em;
+  font-size: 1.5em;
+}
+.datetime-range.date .calendar .calendar-header .arrow.arrow-left {
+  position: absolute;
+  left: 0;
+  width: 2em;
+  height: 100%;
+}
+.datetime-range.date .calendar .calendar-header .arrow.arrow-left::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  border-right: 0.75em solid #ddd;
+  border-top: 0.5em solid transparent;
+  border-bottom: 0.5em solid transparent;
+  transition: border 0.25s ease-out;
+}
+.datetime-range.date .calendar .calendar-header .arrow.arrow-left:hover::before {
+  border-right-color: #999;
+}
+.datetime-range.date .calendar .calendar-header .arrow.arrow-right {
+  position: absolute;
+  right: 0;
+  width: 2em;
+  height: 100%;
+}
+.datetime-range.date .calendar .calendar-header .arrow.arrow-right::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  right: 25%;
+  border-left: 0.75em solid #ddd;
+  border-top: 0.5em solid transparent;
+  border-bottom: 0.5em solid transparent;
+  transition: border 0.25s ease-out;
+}
+.datetime-range.date .calendar .calendar-header .arrow.arrow-right:hover::before {
+  border-left-color: #999;
+}
+.datetime-range.date .calendar .calendar-body {
+  padding: 0.5em 0;
+}
+.datetime-range.date .calendar .calendar-body .weekdays {
+  cursor: default;
+  display: flex;
+  justify-content: space-between;
+  color: #777;
+  font-size: 1em;
+  line-height: 2em;
+  text-transform: uppercase;
+  padding: 0 1em;
+}
+.datetime-range.date .calendar .calendar-body .weekdays .weekday {
+  display: inline-block;
+  width: 5em;
+  height: 2.5em;
+}
+.datetime-range.date .calendar .calendar-body .weekdays .weekday {
+  display: inline-block;
+}
+.datetime-range.date .calendar .calendar-body .week {
+  display: flex;
+  justify-content: space-between;
+  color: #777;
+  font-size: 1.25em;
+  line-height: 2.65em;
+  letter-spacing: 1px;
+  padding: 0.5em 1em;
+}
+.datetime-range.date .calendar .calendar-body .week .date {
+  display: inline-block;
+  cursor: pointer;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  transition: background-color 0.25s ease-out;
+}
+.datetime-range.date .calendar .calendar-body .week .date.current {
+  color: #555;
+  font-weight: 900;
+}
+.datetime-range.date .calendar .calendar-body .week .date:not(.active):hover {
+  background-color: #ddd;
+}
+.datetime-range.date .calendar .calendar-body .week .date.active,
+.datetime-range.date .calendar .calendar-body .week .date.inactive.active {
+  color: #efefef;
+  background-color: rgba(255, 69, 0, 0.75);
+}
+.datetime-range.date .calendar .calendar-body .week .date.inactive {
+  color: #aaa;
+}
+
+
+/**
+ * Close button
+ */
+.datetime-range.date .close-button {
+  position: absolute;
+  z-index: 5;
+  left: -1px;
+  cursor: pointer;
+  outline: none;
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  color: #777;
+  width: 25%;
+  height: auto;
+  margin-top: 10px;
+  font-size: 1.5em;
+  line-height: 2em;
+  box-sizing: border-box;
+  background-color: #efefef;
+  transition: background-color 0.25s ease-out;
+}
+.datetime-range.date .close-button::before {
+  content: "";
+  position: absolute;
+  right: -0.5em;
+  top: -1px;
+  width: 1em;
+  height: 2em;
+  background: #efefef;
+  border-top: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+  transition: background 0.25s ease-out;
+  transform: skewX(-26deg);
+}
+.datetime-range.date .close-button:hover,
+.datetime-range.date .close-button:hover::before {
+  background: #ddd;
+}

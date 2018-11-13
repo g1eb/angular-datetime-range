@@ -1,14 +1,12 @@
-<div class="datetime-range datetime">
+<div class="datetime-range time">
   <div class="start-datetime"
     ng-click="selectDate(start)"
     ng-class="{'active': selected === start, 'warning': warning === 'start' }">
-    <div class="date" ng-bind="start.format('DD MMM YYYY')"></div>
     <div class="time" ng-bind="start.format('HH : mm : ss')"></div>
   </div>
   <div class="end-datetime"
     ng-click="selectDate(end)"
     ng-class="{'active': selected === end, 'warning': warning === 'end'}">
-    <div class="date" ng-bind="end.format('DD MMM YYYY')"></div>
     <div class="time" ng-bind="end.format('HH : mm : ss')"></div>
   </div>
   <div class="presets" ng-show="!!presets">
@@ -26,9 +24,8 @@
     </div>
   </div>
   <div class="edit-popover" ng-show="!!selected">
-    <div class="calendar-toggle"
+    <div class="header"
       ng-class="{'start': selected === start, 'end': selected === end}"
-      ng-click="calendarActive = !calendarActive"
       ng-bind="selected.format('DD MMMM YYYY')">
     </div>
     <div class="calendar" ng-show="!!calendarActive">

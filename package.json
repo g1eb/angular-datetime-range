@@ -1,6 +1,6 @@
 {
   "name": "angular-datetime-range",
-  "version": "0.2.15",
+  "version": "0.4.0",
   "description": "UI widget for datetime range input, converted to an angular directive for your convenience.",
   "homepage": "https://github.com/g1eb/angular-datetime-range#readme",
   "author": "g1eb <mail@g1eb.com> (https://g1eb.com)",
@@ -17,8 +17,7 @@
     "build": "gulp build"
   },
   "dependencies": {
-    "angular": "^1.5.6",
-    "moment": "^2.13.0"
+    "angular-scroll-events": "^0.0.2"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
@@ -26,6 +25,10 @@
     "gulp-concat": "^2.6.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-uglify": "^1.5.3"
+  },
+  "peerDependencies": {
+    "angular": "^1.5.6",
+    "moment": "^2.13.0"
   },
   "keywords": [
     "angular",

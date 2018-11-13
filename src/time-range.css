@@ -1,0 +1,361 @@
+/**
+ * Datetime range styles
+ */
+.datetime-range.time {
+  position: relative;
+  width: 100%;
+  min-width: 350px;
+  height: auto;
+  min-height: 4em;
+  margin: 0;
+  padding: 0;
+  color: #444;
+  font-size: 14px;
+  font-family: sans-serif;
+  text-decoration: none;
+  text-align: center;
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+
+/**
+ * Start and end datetime objects
+ */
+.datetime-range.time .start-datetime,
+.datetime-range.time .end-datetime {
+  cursor: pointer;
+  position: relative;
+  width: 47%;
+  height: 4em;
+  background-color: #efefef;
+  transition: background-color 0.25s ease-out;
+}
+.datetime-range.time .start-datetime {
+  position: absolute;
+  left: 0;
+}
+.datetime-range.time .end-datetime {
+  position: absolute;
+  left: 53%;
+}
+.datetime-range.time .start-datetime .time,
+.datetime-range.time .end-datetime .time {
+  color: #777;
+  font-size: 2em;
+  line-height: 2em;
+  display: block;
+  overflow: hidden;
+}
+.datetime-range.time .start-datetime.active,
+.datetime-range.time .start-datetime:hover,
+.datetime-range.time .end-datetime.active,
+.datetime-range.time .end-datetime:hover {
+  background-color: #ddd;
+}
+.datetime-range.time .start-datetime::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border-top: 2em solid transparent;
+  border-bottom: 2em solid transparent;
+  border-left: 1em solid #efefef;
+  transition: border-left 0.25s ease-out;
+  right: -1em;
+}
+.datetime-range.time .start-datetime.active::after,
+.datetime-range.time .start-datetime:hover::after {
+  border-left-color: #ddd;
+}
+.datetime-range.time .end-datetime::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  border-width: 2em 0 2em 1em;
+  border-style: solid;
+  border-color: #efefef #efefef #efefef transparent;
+  transition: border-color 0.25s ease-out;
+  left: -1em;
+}
+.datetime-range.time .end-datetime.active::before,
+.datetime-range.time .end-datetime:hover::before {
+  border-color: #ddd #ddd #ddd transparent;
+}
+.datetime-range.time .start-datetime.warning,
+.datetime-range.time .end-datetime.warning {
+  background-color: rgba(255, 54, 46, 0.75);
+}
+.datetime-range.time .start-datetime.warning.active,
+.datetime-range.time .start-datetime.warning:hover,
+.datetime-range.time .end-datetime.warning.active,
+.datetime-range.time .end-datetime.warning:hover {
+  background-color: rgba(255, 54, 46, 0.75);
+}
+.datetime-range.time .start-datetime.warning::after {
+  border-left-color: rgba(255, 54, 46, 0.75);
+}
+.datetime-range.time .start-datetime.warning.active::after,
+.datetime-range.time .start-datetime.warning:hover::after {
+  border-left-color: rgba(255, 54, 46, 0.75);
+}
+.datetime-range.time .end-datetime.warning::before {
+  border-color: rgba(255, 54, 46, 0.75) rgba(255, 54, 46, 0.75) rgba(255, 54, 46, 0.75) transparent;
+}
+.datetime-range.time .end-datetime.warning.active::before,
+.datetime-range.time .end-datetime.warning:hover::before {
+  border-color: rgba(255, 54, 46, 0.75) rgba(255, 54, 46, 0.75) rgba(255, 54, 46, 0.75) transparent;
+}
+
+
+/**
+ * Presets
+ */
+.datetime-range.time .presets {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 5;
+  top: 4.5em;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  text-align: center;
+}
+.datetime-range.time .presets .dots {
+  display: inline-block;
+  cursor: pointer;
+}
+.datetime-range.time .presets .dots .dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin: 0 3px;
+  vertical-align: top;
+  background-color: #efefef;
+}
+.datetime-range.time .presets .dots:hover .dot {
+  background-color: #ddd;
+}
+.datetime-range.time .presets .list {
+  display: none;
+}
+.datetime-range.time .presets .list.active {
+  display: block;
+}
+.datetime-range.time .presets .list .preset-button {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  color: #777;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  padding: 0 15px;
+  font-size: 1.5em;
+  line-height: 2em;
+  text-align: center;
+  outline: none;
+  border: 1px solid #aaa;
+  background-color: #efefef;
+  transition: background-color 0.25s ease-out;
+}
+.datetime-range.time .presets .list .preset-button:hover {
+  background: #ddd;
+}
+
+
+/**
+ * Edit datetime popover
+ */
+.datetime-range.time .edit-popover {
+  position: absolute;
+  z-index: 5;
+  top: 4.5em;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  background-color: #efefef;
+  border-radius: 0;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+}
+.datetime-range.time .edit-popover .header {
+  width: 100%;
+  color: #777;
+  font-size: 1.5em;
+  line-height: 2em;
+  cursor: pointer;
+  transition: background-color 0.25s ease-out;
+}
+.datetime-range.time .edit-popover .header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #efefef;
+  width: 1em;
+  height: 1em;
+  top: -0.55em;
+  left: 45%;
+  z-index: 2;
+  border-color: #aaa;
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+  transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transition: background-color 0.25s ease-out;
+}
+.datetime-range.time .edit-popover .header.start::before {
+  left: 20%;
+}
+.datetime-range.time .edit-popover .header.end::before {
+  left: 74%;
+}
+
+
+/**
+ * Timer
+ */
+.datetime-range.time .timer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.datetime-range.time .timer .timer-hours,
+.datetime-range.time .timer .timer-minutes,
+.datetime-range.time .timer .timer-seconds {
+  cursor: default;
+  width: 3em;
+  display: inline-block;
+  font-size: 3em;
+  line-height: 1.5em;
+  position: relative;
+}
+.datetime-range.time .timer .timer-hours .arrow,
+.datetime-range.time .timer .timer-minutes .arrow,
+.datetime-range.time .timer .timer-seconds .arrow {
+  position: relative;
+  color: #ddd;
+  cursor: pointer;
+  height: 1em;
+  margin: 0 0.5em;
+  line-height: 1em;
+  font-size: 0.75em;
+}
+.datetime-range.time .timer .timer-hours .arrow.arrow-up::before,
+.datetime-range.time .timer .timer-minutes .arrow.arrow-up::before,
+.datetime-range.time .timer .timer-seconds .arrow.arrow-up::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 0.4em);
+  border-left: 0.5em solid transparent;
+  border-right: 0.5em solid transparent;
+  border-bottom: 0.5em solid #ddd;
+  transition: border 0.25s ease-out;
+}
+.datetime-range.time .timer .timer-hours .arrow.arrow-up:hover::before,
+.datetime-range.time .timer .timer-minutes .arrow.arrow-up:hover::before,
+.datetime-range.time .timer .timer-seconds .arrow.arrow-up:hover::before {
+  border-bottom-color: #999;
+}
+.datetime-range.time .timer .timer-hours .arrow.arrow-down::before,
+.datetime-range.time .timer .timer-minutes .arrow.arrow-down::before,
+.datetime-range.time .timer .timer-seconds .arrow.arrow-down::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(50% - 0.4em);
+  border-left: 0.5em solid transparent;
+  border-right: 0.5em solid transparent;
+  border-top: 0.5em solid #ddd;
+  transition: border 0.25s ease-out;
+}
+.datetime-range.time .timer .timer-hours .arrow.arrow-down:hover::before,
+.datetime-range.time .timer .timer-minutes .arrow.arrow-down:hover::before,
+.datetime-range.time .timer .timer-seconds .arrow.arrow-down:hover::before {
+  border-top-color: #999;
+}
+.datetime-range.time .timer .timer-divider {
+  font-size: 3em;
+  line-height: 3em;
+  -webkit-animation-name: blinker;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-name: blinker;
+  -moz-animation-duration: 5s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+  animation-name: blinker;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@-moz-keyframes blinker {
+  0% { opacity: 0.0; }
+  5% { opacity: 1.0; }
+  95% { opacity: 1.0; }
+  100% { opacity: 0.0; }
+}
+@-webkit-keyframes blinker {
+  0% { opacity: 0.0; }
+  5% { opacity: 1.0; }
+  95% { opacity: 1.0; }
+  100% { opacity: 0.0; }
+}
+@keyframes blinker {
+  0% { opacity: 0.0; }
+  5% { opacity: 1.0; }
+  95% { opacity: 1.0; }
+  100% { opacity: 0.0; }
+}
+
+
+/**
+ * Close button
+ */
+.datetime-range.time .close-button {
+  position: absolute;
+  z-index: 5;
+  left: -1px;
+  cursor: pointer;
+  outline: none;
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  color: #777;
+  width: 25%;
+  height: auto;
+  margin-top: 10px;
+  font-size: 1.5em;
+  line-height: 2em;
+  box-sizing: border-box;
+  background-color: #efefef;
+  transition: background-color 0.25s ease-out;
+}
+.datetime-range.time .close-button::before {
+  content: "";
+  position: absolute;
+  right: -0.5em;
+  top: -1px;
+  width: 1em;
+  height: 2em;
+  background: #efefef;
+  border-top: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+  transition: background 0.25s ease-out;
+  transform: skewX(-26deg);
+}
+.datetime-range.time .close-button:hover,
+.datetime-range.time .close-button:hover::before {
+  background: #ddd;
+}
