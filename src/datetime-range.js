@@ -41,8 +41,12 @@ angular.module('g1b.datetime-range', ['g1b.scroll-events']).
           // Set utc offset
           if ( scope.utcOffset !== undefined ) {
             scope.current.utcOffset(scope.utcOffset);
-            scope.start.utcOffset(scope.utcOffset);
-            scope.end.utcOffset(scope.utcOffset);
+            if ( scope.start ) {
+              scope.start.utcOffset(scope.utcOffset);
+            }
+            if ( scope.end ) {
+              scope.end.utcOffset(scope.utcOffset);
+            }
           }
 
           // Get number of weeks in month
